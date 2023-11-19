@@ -7,4 +7,7 @@ public class Team {
         this.teamName = teamName;
     }
 
+    public String getTeamName() {
+        return teamName;
+    }
 }
