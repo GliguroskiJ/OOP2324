@@ -54,7 +54,7 @@ public class Championship {
                 else activeMatch.add(MatchEvent.EventType.MISSEDPENALTY, min, team);
                 break;
             }
-            if (rand > 5 ) activeMatch.add(MatchEvent.EventType.GOAL, min, team);
+            if (rand > 6 ) activeMatch.add(MatchEvent.EventType.GOAL, min, team);
         }
     }
 }
