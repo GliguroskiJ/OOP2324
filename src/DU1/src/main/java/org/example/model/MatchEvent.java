@@ -1,7 +1,7 @@
 package org.example.model;
 
 public class MatchEvent {
-    enum EventType{ START, END, GOAL, PENALTY, YELLOWCARD}
+    enum EventType{ START, END, GOAL, PENALTY, MISSEDPENALTY}
     private int gameTime;
     private EventType eventtype;
     private Team team;
