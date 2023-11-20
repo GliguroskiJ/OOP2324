@@ -2,6 +2,7 @@ package org.example.model;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
 
 public class Match {
     private Team team1;
@@ -29,9 +30,11 @@ public class Match {
     }
     public void endGame()
     {
+        Random rand = new Random();
+        int minutesPlus = rand.nextInt(3);
         if (!gameStarted) throw new IllegalStateException("Zápas ještě nezačal");
         gameEnded = true;
-        eventList.addLast(new MatchEvent(90, MatchEvent.EventType.END));
+        eventList.addLast(new MatchEvent(90+minutesPlus, MatchEvent.EventType.END));
     }
     public void add(MatchEvent.EventType evntp, int gametime, Team team) {
         eventList.add(new MatchEvent(gametime, evntp, team));

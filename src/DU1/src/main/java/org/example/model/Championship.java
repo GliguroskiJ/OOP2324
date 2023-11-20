@@ -46,14 +46,15 @@ public class Championship {
         {
             rand = rnd.nextInt(10);
             min = rnd.nextInt(90);
-            if (rand > 5 ) activeMatch.add(MatchEvent.EventType.GOAL, min, team);
             if (rand == 9 )
             {
                 activeMatch.add(MatchEvent.EventType.PENALTY, min, team);
                 int penalta = rnd.nextInt(2);
                 if (penalta == 1) activeMatch.add(MatchEvent.EventType.GOAL, min, team);
                 else activeMatch.add(MatchEvent.EventType.MISSEDPENALTY, min, team);
+                break;
             }
+            if (rand > 5 ) activeMatch.add(MatchEvent.EventType.GOAL, min, team);
         }
     }
 }
