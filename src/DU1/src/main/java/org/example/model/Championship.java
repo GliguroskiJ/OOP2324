@@ -13,10 +13,10 @@ public class Championship {
 
     public Championship(List<Team> teams) {
         this.teams = teams;
-        doubles();
+        generateMatches();
     }
 
-    public void doubles()
+    public void generateMatches()
     {
         Collections.shuffle(teams);
         if(teams.size() > 2)
@@ -29,11 +29,10 @@ public class Championship {
         }
         else throw new IllegalStateException("Není založen dostatek týmů");
     }
-    public void simulate()
+    public void simulateChampionship()
     {
-        for (int i = 0; i < matches.size(); i++)
-        {
-            activeMatch = matches.get(i);
+        for (Match match : matches) {
+            activeMatch = match;
             activeMatch.startGame();
             generateEvents(activeMatch.getTeam1());
             generateEvents(activeMatch.getTeam2());

@@ -19,6 +19,6 @@ public class Main {
         teams.add(team4);
 
         Championship champ = new Championship(teams);
-        champ.simulate();
+        champ.simulateChampionship();
     }
 }
