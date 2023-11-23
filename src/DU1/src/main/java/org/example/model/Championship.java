@@ -13,7 +13,6 @@ public class Championship {
 
     public Championship(List<Team> teams) {
         this.teams = teams;
-        generateMatches();
     }
 
     public void generateMatches()
@@ -31,6 +30,7 @@ public class Championship {
     }
     public void simulateChampionship()
     {
+        generateMatches();
         for (Match match : matches) {
             activeMatch = match;
             activeMatch.startGame();

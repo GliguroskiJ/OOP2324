@@ -1,14 +1,15 @@
-package org.example.main;
+package org.model;
+
+import org.example.model.*;
+import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
-import org.example.model.Championship;
-import org.example.model.Team;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class Main {
-    public static void main(String[] args) {
-        /*
+public class MatchTest {
+    @Test
+    void getScores() {
         List<Team> teams = new ArrayList<>();
-
         Team team1 = new Team("Slavia");
         Team team2 = new Team("Sparta");
         Team team3 = new Team("Plzen");
@@ -21,6 +22,7 @@ public class Main {
 
         Championship champ = new Championship(teams);
         champ.simulateChampionship();
-         */
+
+        assertNotNull(champ.getChampion());
     }
 }
