@@ -39,6 +39,7 @@ public class Championship {
             activeMatch.endGame();
             activeMatch.eventLog();
         }
+        System.out.println("\nVítězem šampionátu se stal tým "+getChampion()+"!");
     }
     public void generateEvents(Team team)
     {
@@ -56,5 +57,21 @@ public class Championship {
             }
             if (rand > 6 ) activeMatch.add(MatchEvent.EventType.GOAL, min, team);
         }
+    }
+    public String getChampion()
+    {
+        int maxPoints = 0;
+        String champ = "";
+        System.out.println("\nBodový výsledek šampionátu je následující: ");
+        for (int i = 0; i < teams.size(); i++)
+        {
+            System.out.println(teams.get(i).getTeamName()+" "+teams.get(i).getPoints());
+            if (teams.get(i).getPoints() > maxPoints)
+            {
+                maxPoints = teams.get(i).getPoints();
+                champ = teams.get(i).getTeamName();
+            }
+        }
+        return champ;
     }
 }

@@ -74,9 +74,9 @@ public class Match {
                     else scoreTeam2++;
                 }
             }
-            if (scoreTeam1 > scoreTeam2) return "Zápas vyhrál tým "+getTeam1().getTeamName();
-            else if (scoreTeam1 == scoreTeam2) return "Zápas skončil remízou";
-            else return "Zápas vyhrál tým "+getTeam2().getTeamName();
+            if (scoreTeam1 > scoreTeam2) getTeam1().setPoints(1);
+            else getTeam2().setPoints(1);
+            return "Zápas skončil "+getTeam1().getTeamName()+" "+scoreTeam1+":"+scoreTeam2+" "+getTeam2().getTeamName();
         }
         else
         {
