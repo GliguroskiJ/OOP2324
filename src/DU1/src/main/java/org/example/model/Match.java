@@ -74,8 +74,13 @@ public class Match {
                     else scoreTeam2++;
                 }
             }
-            if (scoreTeam1 > scoreTeam2) getTeam1().setPoints(1);
-            else getTeam2().setPoints(1);
+            if (scoreTeam1 > scoreTeam2) getTeam1().setPoints(3);
+            else if (scoreTeam1 == scoreTeam2)
+            {
+                getTeam1().setPoints(1);
+                getTeam2().setPoints(1);
+            }
+            else getTeam2().setPoints(3);
             return "Zápas skončil "+getTeam1().getTeamName()+" "+scoreTeam1+":"+scoreTeam2+" "+getTeam2().getTeamName();
         }
         else
