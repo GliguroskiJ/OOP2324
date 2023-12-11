@@ -14,5 +14,5 @@ public class MilkCoffee extends CoffeeDecorator
     }
 
     @Override
-    public double getCost() {return super.getCost()};
+    public double getCost() {return super.getCost()+5;}
 }

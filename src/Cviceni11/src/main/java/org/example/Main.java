@@ -14,5 +14,11 @@ public class Main {
 
         Coffee simpleCoffee=new SimpleCoffee();
         vypisKavy(simpleCoffee);
+
+        Coffee milkCoffee=new MilkCoffee(simpleCoffee);
+        vypisKavy(milkCoffee);
+
+        Coffee sugarMilkCoffee=new SugarMilkCoffee(milkCoffee);
+        vypisKavy(sugarMilkCoffee);
     }
 }

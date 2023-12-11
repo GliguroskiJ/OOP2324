@@ -9,9 +9,9 @@ public class SugarMilkCoffee extends CoffeeDecorator{
     @Override
     public String prepareCoffee()
     {
-        return super.prepareCoffee()+", cukrem a s mlekem";
+        return super.prepareCoffee()+" a cukrem";
     }
 
     @Override
-    public double getCost() {return super.getCost()};
+    public double getCost() {return super.getCost()+6;}
 }
