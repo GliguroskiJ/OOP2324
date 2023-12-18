@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50d06b84-4145-444d-95ae-3ef04e1a795e" name="Changes" comment="milk + suggar">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/proxy/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/proxy/Servicelmpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/proxy/SimpleLoggingProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/decorator/MilkCoffee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/decorator/MilkCoffee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/decorator/SugarMilkCoffee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/decorator/SugarMilkCoffee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="50d06b84-4145-444d-95ae-3ef04e1a795e" name="Changes" comment="milk + sugar" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702307366838</updated>
       <workItem from="1702307367977" duration="801000" />
-      <workItem from="1702308230650" duration="2733000" />
+      <workItem from="1702308230650" duration="2967000" />
     </task>
     <task id="LOCAL-00001" summary="cv11">
       <option name="closed" value="true" />
@@ -113,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702310541823</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="milk + sugar">
+      <option name="closed" value="true" />
+      <created>1702311091017</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702311091017</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +123,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="cv11" />
     <MESSAGE value="milk + suggar" />
-    <option name="LAST_COMMIT_MESSAGE" value="milk + suggar" />
+    <MESSAGE value="milk + sugar" />
+    <option name="LAST_COMMIT_MESSAGE" value="milk + sugar" />
   </component>
 </project>
