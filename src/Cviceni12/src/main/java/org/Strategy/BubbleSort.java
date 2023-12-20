@@ -1,8 +1,8 @@
-package org.strategy;
+package org.Strategy;
 
 import java.util.List;
 
-public class BubbleSort implements Sorting{
+public class BubbleSort implements org.strategy.Sorting {
     @Override
     public List<Integer> sort(List<Integer> inputList) {
         for (int i = 0; i < inputList.size() - 1; i++) {

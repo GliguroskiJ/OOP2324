@@ -1,6 +1,9 @@
-package org.main;
+package org.example;
 
+import org.Strategy.BubbleSort;
+import org.Strategy.Sorter;
 import org.iterator.SimpleIterator;
+import org.prototype.Car;
 
 import java.util.List;
 
@@ -18,6 +21,10 @@ public class Main {
 
         List<Integer> numbers = List.of(64, 25, 12, 22, 11,8,23,17);
 
+        Sorter bubbleSort = new Sorter (new BubbleSort());
 
+        Car auto0 = new Car("Skoda");
+        System.out.println("Puvodní auto"+auto0.getNazev());
+        
     }
 }
