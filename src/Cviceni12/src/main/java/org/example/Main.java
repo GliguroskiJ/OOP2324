@@ -25,6 +25,6 @@ public class Main {
 
         Car auto0 = new Car("Skoda");
         System.out.println("Puvodní auto"+auto0.getNazev());
-        
+
     }
 }
