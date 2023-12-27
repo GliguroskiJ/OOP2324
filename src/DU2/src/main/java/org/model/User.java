@@ -45,8 +45,10 @@ public class User {
             feed.getPosts().addAll(friend.posts);
         }
         for (Group group : groups) {
-            if (group.getMembers().toString().contains(this.username)) {
-                feed.getPosts().addAll(group.getPosts());
+            for (int i = 0; i < group.getMembers().size(); i++){
+                if (group.getMembers().get(i).toString().contains(username)) {
+                    feed.getPosts().addAll(group.getPosts());
+                }
             }
         }
         feed.getPosts().addAll(getPosts());
@@ -62,10 +64,20 @@ public class User {
         System.out.println("\nFeed uživatele: "+this.username);
         for (int i = 0; i < feed.getPosts().size(); i++){
             if (feed.getPosts().get(i).getGroup() == null) {
-                System.out.println("Uživatel " + feed.getPosts().get(i).getAuthor().getUsername() + " přidal příspěvek: " + feed.getPosts().get(i).getText());
+                if (feed.getPosts().get(i).getAuthor().getUsername() == username){
+                    System.out.println("Přidal/a jste příspěvek: " + feed.getPosts().get(i).getText());
+                }
+                else {
+                    System.out.println("Uživatel/ka " + feed.getPosts().get(i).getAuthor().getUsername() + " přidal/a příspěvek: " + feed.getPosts().get(i).getText());
+                }
             }
             else if (feed.getPosts().get(i).getGroup().getName() != null){
-                System.out.println("Uživatel " + feed.getPosts().get(i).getAuthor().getUsername() + " přidal příspěvek do skupiny "+feed.getPosts().get(i).getGroup().getName()+": "+feed.getPosts().get(i).getText());
+                if (feed.getPosts().get(i).getAuthor().getUsername() == username) {
+                    System.out.println("Přidal/a jste příspěvek do skupiny "+feed.getPosts().get(i).getGroup().getName()+": "+feed.getPosts().get(i).getText());
+                }
+                else {
+                    System.out.println("Uživatel/ka " + feed.getPosts().get(i).getAuthor().getUsername() + " přidal/a příspěvek do skupiny "+feed.getPosts().get(i).getGroup().getName()+": "+feed.getPosts().get(i).getText());
+                }
             }
         }
     }
