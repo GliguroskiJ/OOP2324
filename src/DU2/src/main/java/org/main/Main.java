@@ -36,12 +36,13 @@ public class Main {
         catsGroup.addMember(u2);
         network.createGroup("Kočkaři");
 
-        u1.addPost("Kočky jsou super");
-        u2.addPost("Dnes jsem si koupil 8 nových koček");
-        u3.addPost("Fko");
-        u4.addPost("Dnes jsem našel malou kočku venku, tak jsem si ji vzal domů");
-        catsGroup.addPost("Miluju kočky", u2);
-        catsGroup.addPost("Kočky jsou úžasný", u1);
+        u1.addPost("Kočky jsou super", null);
+        u2.addPost("Dnes jsem si koupil 8 nových koček", null);
+        u3.addPost("Fko", null);
+        u4.addPost("Dnes jsem našel malou kočku venku, tak jsem si ji vzal domů", null);
+        catsGroup.addPost("Miluju kočky", u2, catsGroup);
+        catsGroup.addPost("Kočky jsou úžasný", u1, catsGroup);
+        dogsGroup.addPost("Lovískuju svého dogga", u4, dogsGroup);
 
         u1.getFeed();
         u2.getFeed();

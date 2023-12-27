@@ -24,8 +24,8 @@ public class User {
         user.friends.add(this);
     }
 
-    public void addPost(String text) {
-        Post post = new Post(this, text);
+    public void addPost(String text, Group group) {
+        Post post = new Post(this, text, group);
         posts.add(post);
         addToFeed(post);
     }
@@ -45,7 +45,9 @@ public class User {
             feed.getPosts().addAll(friend.posts);
         }
         for (Group group : groups) {
-            feed.getPosts().addAll(group.getPosts());
+            if (group.getMembers().toString().contains(this.username)) {
+                feed.getPosts().addAll(group.getPosts());
+            }
         }
         feed.getPosts().addAll(getPosts());
         Collections.shuffle(feed.getPosts());
@@ -59,7 +61,12 @@ public class User {
         updateFeed();
         System.out.println("\nFeed uživatele: "+this.username);
         for (int i = 0; i < feed.getPosts().size(); i++){
-            System.out.println("Uživatel "+feed.getPosts().get(i).getAuthor().getUsername()+" přidal příspěvek: "+feed.getPosts().get(i).getText());
+            if (feed.getPosts().get(i).getGroup() == null) {
+                System.out.println("Uživatel " + feed.getPosts().get(i).getAuthor().getUsername() + " přidal příspěvek: " + feed.getPosts().get(i).getText());
+            }
+            else if (feed.getPosts().get(i).getGroup().getName() != null){
+                System.out.println("Uživatel " + feed.getPosts().get(i).getAuthor().getUsername() + " přidal příspěvek do skupiny "+feed.getPosts().get(i).getGroup().getName()+": "+feed.getPosts().get(i).getText());
+            }
         }
     }
 }
