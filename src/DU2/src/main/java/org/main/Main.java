@@ -5,11 +5,11 @@ public class Main {
     public static void main(String[] args) {
         SocialNetwork network = new SocialNetwork();
 
-        User u1 = new User("user1");
-        User u2 = new User("user2");
-        User u3 = new User("user3");
-        User u4 = new User("user4");
-        User u5 = new User("user5");
+        User u1 = new User("Petr Novotný");
+        User u2 = new User("Michal Hrůzný");
+        User u3 = new User("Lukáš Malý");
+        User u4 = new User("Jana Střední");
+        User u5 = new User("Lucie Veliká");
 
         network.registerUser(u1);
         network.registerUser(u2);
@@ -37,12 +37,16 @@ public class Main {
         network.createGroup("Kočkaři");
 
         u1.addPost("Kočky jsou super");
-        u1.addPost("Kočky jsou super2");
-        u1.addPost("Kočky jsou super3");
         u2.addPost("Dnes jsem si koupil 8 nových koček");
         u3.addPost("Fko");
+        u4.addPost("Dnes jsem našel malou kočku venku, tak jsem si ji vzal domů");
         catsGroup.addPost("Miluju kočky", u2);
+        catsGroup.addPost("Kočky jsou úžasný", u1);
 
         u1.getFeed();
+        u2.getFeed();
+        u3.getFeed();
+        u4.getFeed();
+        u5.getFeed();
     }
 }

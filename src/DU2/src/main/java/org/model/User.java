@@ -2,6 +2,7 @@ package org.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
 
 public class User {
     private String username;
@@ -20,7 +21,7 @@ public class User {
 
     public void addFriend(User user) {
         friends.add(user);
-        user.friends.add(this); // Ensure mutual friendship
+        user.friends.add(this);
     }
 
     public void addPost(String text) {
@@ -47,6 +48,7 @@ public class User {
             feed.getPosts().addAll(group.getPosts());
         }
         feed.getPosts().addAll(getPosts());
+        Collections.shuffle(feed.getPosts());
     }
 
     public List<Post> getPosts() {
@@ -55,8 +57,9 @@ public class User {
 
     public void getFeed() {
         updateFeed();
+        System.out.println("\nFeed uživatele: "+this.username);
         for (int i = 0; i < feed.getPosts().size(); i++){
-            System.out.println("Uživatel "+feed.getPosts().get(i).getAuthor().getUsername()+" přidal příspěvek: "+feed.getPosts().get(i).getText()+"\n");
+            System.out.println("Uživatel "+feed.getPosts().get(i).getAuthor().getUsername()+" přidal příspěvek: "+feed.getPosts().get(i).getText());
         }
     }
 }
