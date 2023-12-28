@@ -3,6 +3,7 @@ package org.model;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
+import java.util.Objects;
 
 public class User {
     private String username;
@@ -24,7 +25,13 @@ public class User {
         user.friends.add(this);
     }
 
-    public void addPost(String text, Group group) {
+    public void addPost(String text) {
+        Post post = new Post(this, text);
+        posts.add(post);
+        addToFeed(post);
+    }
+
+    public void addGroupPost(String text, Group group) {
         Post post = new Post(this, text, group);
         posts.add(post);
         addToFeed(post);
@@ -32,7 +39,7 @@ public class User {
 
     public void addToFeed(Post post) {
         feed.addPost(post);
-        updateFeed();
+        //updateFeed();
     }
 
     public String getUsername() {
@@ -41,42 +48,35 @@ public class User {
 
     public void updateFeed() {
         feed = new Feed();
-        for (User friend : friends) {
+        /*for (User friend : friends) {
             feed.getPosts().addAll(friend.posts);
-        }
+        }*/
         for (Group group : groups) {
-            for (int i = 0; i < group.getMembers().size(); i++){
-                if (group.getMembers().get(i).toString().contains(username)) {
+            for (int i = 0; i < group.getMembers().size(); i++) {
+                if (group.getMembers().get(i).toString() == username) {
                     feed.getPosts().addAll(group.getPosts());
                 }
             }
         }
-        feed.getPosts().addAll(getPosts());
+        feed.getPosts().addAll(posts);
         Collections.shuffle(feed.getPosts());
-    }
-
-    public List<Post> getPosts() {
-        return posts;
     }
 
     public void getFeed() {
         updateFeed();
-        System.out.println("\nFeed uživatele: "+this.username);
-        for (int i = 0; i < feed.getPosts().size(); i++){
+        System.out.println("\nFeed uživatele: " + this.username);
+        for (int i = 0; i < feed.getPosts().size(); i++) {
             if (feed.getPosts().get(i).getGroup() == null) {
-                if (feed.getPosts().get(i).getAuthor().getUsername() == username){
+                if (Objects.equals(feed.getPosts().get(i).getAuthor().getUsername(), username)) {
                     System.out.println("Přidal/a jste příspěvek: " + feed.getPosts().get(i).getText());
-                }
-                else {
+                } else {
                     System.out.println("Uživatel/ka " + feed.getPosts().get(i).getAuthor().getUsername() + " přidal/a příspěvek: " + feed.getPosts().get(i).getText());
                 }
-            }
-            else if (feed.getPosts().get(i).getGroup().getName() != null){
-                if (feed.getPosts().get(i).getAuthor().getUsername() == username) {
-                    System.out.println("Přidal/a jste příspěvek do skupiny "+feed.getPosts().get(i).getGroup().getName()+": "+feed.getPosts().get(i).getText());
-                }
-                else {
-                    System.out.println("Uživatel/ka " + feed.getPosts().get(i).getAuthor().getUsername() + " přidal/a příspěvek do skupiny "+feed.getPosts().get(i).getGroup().getName()+": "+feed.getPosts().get(i).getText());
+            } else if (feed.getPosts().get(i).getGroup().getName() != null) {
+                if (Objects.equals(feed.getPosts().get(i).getAuthor().getUsername(), username)) {
+                    System.out.println("Přidal/a jste příspěvek do skupiny " + feed.getPosts().get(i).getGroup().getName() + ": " + feed.getPosts().get(i).getText());
+                } else {
+                    System.out.println("Uživatel/ka " + feed.getPosts().get(i).getAuthor().getUsername() + " přidal/a příspěvek do skupiny " + feed.getPosts().get(i).getGroup().getName() + ": " + feed.getPosts().get(i).getText());
                 }
             }
         }

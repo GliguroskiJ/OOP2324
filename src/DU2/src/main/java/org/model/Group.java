@@ -21,7 +21,7 @@ public class Group {
     public void addPost(String text, User author, Group group) {
         Post post = new Post(author, text, group);
         posts.add(post);
-        author.addPost(text, group);
+        author.addGroupPost(text, group);
     }
 
     public List<Post> getPosts() {

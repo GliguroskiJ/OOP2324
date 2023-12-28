@@ -11,6 +11,12 @@ public class Post {
         this.group = group;
     }
 
+    public Post(User author, String text) {
+        this.author = author;
+        this.text = text;
+        this.group = null;
+    }
+
     public User getAuthor() {
         return author;
     }
