@@ -6,7 +6,7 @@ import org.example.model.Team;
 
 public class Main {
     public static void main(String[] args) {
-        /*
+
         List<Team> teams = new ArrayList<>();
 
         Team team1 = new Team("Slavia");
@@ -21,6 +21,6 @@ public class Main {
 
         Championship champ = new Championship(teams);
         champ.simulateChampionship();
-         */
+
     }
 }

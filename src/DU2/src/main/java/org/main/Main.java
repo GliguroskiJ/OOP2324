@@ -3,7 +3,7 @@ package org.main;
 import org.model.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         SocialNetwork network = new SocialNetwork();
 
         User u1 = new User("Petr Novotný");
@@ -38,6 +38,13 @@ public class Main {
         catsGroup.addMember(u2);
         network.createGroup("Kočkaři");
 
+        /*for (int i = 0; i < catsGroup.getMembers().size(); i++){
+            System.out.println(catsGroup.getMembers().get(i).getUsername());
+        }
+        for (int i = 0; i < dogsGroup.getMembers().size(); i++){
+            System.out.println(dogsGroup.getMembers().get(i).getUsername());
+        }*/
+
         u1.addPost("Kočky jsou super");
         u2.addPost("Dnes jsem si koupil 8 nových koček");
         u3.addPost("Fko");
@@ -45,11 +52,12 @@ public class Main {
         catsGroup.addPost("Miluju kočky", u2, catsGroup);
         catsGroup.addPost("Kočky jsou úžasný", u1, catsGroup);
         dogsGroup.addPost("Lovískuju svého dogga", u4, dogsGroup);
+        //dogsGroup.addPost("Lovískuju svého dogga", u1, dogsGroup);
 
-        u1.getFeed();
-        u2.getFeed();
-        u3.getFeed();
-        u4.getFeed();
-        u5.getFeed();
+        u1.showFeed();
+        u2.showFeed();
+        u3.showFeed();
+        u4.showFeed();
+        u5.showFeed();
     }
 }

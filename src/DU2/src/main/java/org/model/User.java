@@ -26,44 +26,17 @@ public class User {
     }
 
     public void addPost(String text) {
-        Post post = new Post(this, text);
-        posts.add(post);
-        addToFeed(post);
-    }
-
-    public void addGroupPost(String text, Group group) {
-        Post post = new Post(this, text, group);
-        posts.add(post);
-        addToFeed(post);
-    }
-
-    public void addToFeed(Post post) {
-        feed.addPost(post);
-        //updateFeed();
+        feed.addPost(new Post (this, text));
+        for (User friend : friends) {
+            friend.feed.addPost(new Post (this, text));
+        }
     }
 
     public String getUsername() {
         return username;
     }
 
-    public void updateFeed() {
-        feed = new Feed();
-        /*for (User friend : friends) {
-            feed.getPosts().addAll(friend.posts);
-        }*/
-        for (Group group : groups) {
-            for (int i = 0; i < group.getMembers().size(); i++) {
-                if (group.getMembers().get(i).toString() == username) {
-                    feed.getPosts().addAll(group.getPosts());
-                }
-            }
-        }
-        feed.getPosts().addAll(posts);
-        Collections.shuffle(feed.getPosts());
-    }
-
-    public void getFeed() {
-        updateFeed();
+    public void showFeed() {
         System.out.println("\nFeed uživatele: " + this.username);
         for (int i = 0; i < feed.getPosts().size(); i++) {
             if (feed.getPosts().get(i).getGroup() == null) {
@@ -80,5 +53,9 @@ public class User {
                 }
             }
         }
+    }
+
+    public Feed getFeed() {
+        return feed;
     }
 }

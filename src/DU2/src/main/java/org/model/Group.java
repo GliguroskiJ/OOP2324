@@ -15,13 +15,21 @@ public class Group {
     }
 
     public void addMember(User user) {
-        members.add(user);
+        this.members.add(user);
     }
 
-    public void addPost(String text, User author, Group group) {
-        Post post = new Post(author, text, group);
-        posts.add(post);
-        author.addGroupPost(text, group);
+    public boolean isMember(User user){
+        if (members.contains(user)) return true;
+        else return false;
+    }
+
+    public void addPost(String text, User author, Group group) throws Exception {
+        if (isMember(author)){
+            Post post = new Post(author, text, group);
+            for (User member : members) {
+                member.getFeed().addPost(post);
+            }
+        }else throw new Exception("Uživatel "+author.getUsername()+" není členem skupiny "+group.getName());
     }
 
     public List<Post> getPosts() {
