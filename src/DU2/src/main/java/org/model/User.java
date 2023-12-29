@@ -8,15 +8,11 @@ import java.util.Objects;
 public class User {
     private String username;
     private List<User> friends;
-    private List<Group> groups;
-    private List<Post> posts;
     private Feed feed;
 
     public User(String username) {
         this.username = username;
         this.friends = new ArrayList<>();
-        this.groups = new ArrayList<>();
-        this.posts = new ArrayList<>();
         this.feed = new Feed();
     }
 
@@ -26,14 +22,18 @@ public class User {
     }
 
     public void addPost(String text) {
-        feed.addPost(new Post (this, text));
+        feed.addPost(new Post(this, text));
         for (User friend : friends) {
-            friend.feed.addPost(new Post (this, text));
+            friend.feed.addPost(new Post(this, text));
         }
     }
 
     public String getUsername() {
         return username;
+    }
+
+    public Feed getFeed() {
+        return feed;
     }
 
     public void showFeed() {
@@ -53,9 +53,5 @@ public class User {
                 }
             }
         }
-    }
-
-    public Feed getFeed() {
-        return feed;
     }
 }

@@ -49,10 +49,10 @@ public class Main {
         u2.addPost("Dnes jsem si koupil 8 nových koček");
         u3.addPost("Fko");
         u4.addPost("Dnes jsem našla malou kočku venku, tak jsem si ji vzala domů");
-        catsGroup.addPost("Miluju kočky", u2, catsGroup);
-        catsGroup.addPost("Kočky jsou úžasný", u1, catsGroup);
-        dogsGroup.addPost("Lovískuju svého dogga", u4, dogsGroup);
-        //dogsGroup.addPost("Lovískuju svého dogga", u1, dogsGroup);
+        catsGroup.addPost("Miluju kočky", u2);
+        catsGroup.addPost("Kočky jsou úžasný", u1);
+        dogsGroup.addPost("Lovískuju svého dogga", u4);
+        //dogsGroup.addPost("Lovískuju svého dogga", u1);
 
         u1.showFeed();
         u2.showFeed();
