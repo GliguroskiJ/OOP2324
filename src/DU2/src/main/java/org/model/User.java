@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Collections;
 import java.util.Objects;
 
-public class User {
+public class User implements Observer, Observable{
     private String username;
     private List<User> friends;
     private Feed feed;
@@ -16,16 +16,9 @@ public class User {
         this.feed = new Feed();
     }
 
-    public void addFriend(User user) {
-        friends.add(user);
-        user.friends.add(this);
-    }
-
     public void addPost(String text) {
         feed.addPost(new Post(this, text));
-        for (User friend : friends) {
-            friend.feed.addPost(new Post(this, text));
-        }
+        notifyAboutPost(new Post(this, text));
     }
 
     public String getUsername() {
@@ -53,5 +46,18 @@ public class User {
                 }
             }
         }
+    }
+
+    @Override
+    public void notifyAboutPost(Post post) {
+        for (User friend : friends) {
+            friend.feed.addPost(post);
+        }
+    }
+
+    @Override
+    public void addPerson(User user) {
+        friends.add(user);
+        user.friends.add(this);
     }
 }

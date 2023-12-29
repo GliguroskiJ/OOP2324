@@ -18,24 +18,24 @@ public class Main {
         network.registerUser(u4);
         network.registerUser(u5);
 
-        u1.addFriend(u2);
-        u1.addFriend(u3);
-        u1.addFriend(u4);
+        u1.addPerson(u2);
+        u1.addPerson(u3);
+        u1.addPerson(u4);
 
-        u2.addFriend(u3);
-        u2.addFriend(u4);
+        u2.addPerson(u3);
+        u2.addPerson(u4);
 
-        u5.addFriend(u3);
-        u5.addFriend(u4);
+        u5.addPerson(u3);
+        u5.addPerson(u4);
 
         Group dogsGroup = new Group("Pejskaři");
-        dogsGroup.addMember(u3);
-        dogsGroup.addMember(u4);
+        dogsGroup.addPerson(u3);
+        dogsGroup.addPerson(u4);
         network.createGroup("Pejskaři");
 
         Group catsGroup = new Group("Kočkaři");
-        catsGroup.addMember(u1);
-        catsGroup.addMember(u2);
+        catsGroup.addPerson(u1);
+        catsGroup.addPerson(u2);
         network.createGroup("Kočkaři");
 
         /*for (int i = 0; i < catsGroup.getMembers().size(); i++){

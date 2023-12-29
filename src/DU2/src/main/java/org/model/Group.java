@@ -3,7 +3,7 @@ package org.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Group {
+public class Group implements Observable{
     private String name;
     private List<User> members;
 
@@ -12,9 +12,9 @@ public class Group {
         this.members = new ArrayList<>();
     }
 
-    public void addMember(User user) {
+    /*public void addMember(User user) {
         this.members.add(user);
-    }
+    }*/
 
     public boolean isMember(User user) {
         if (members.contains(user)) return true;
@@ -32,5 +32,10 @@ public class Group {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public void addPerson(User user) {
+        this.members.add(user);
     }
 }
