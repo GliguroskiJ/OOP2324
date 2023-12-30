@@ -30,6 +30,14 @@ public class Group implements Observable{
         } else throw new Exception("Uživatel " + author.getUsername() + " není členem skupiny " + this.getName());
     }
 
+    public void addPostTest(Post post) throws Exception {
+        if (isMember(post.getAuthor())) {
+            for (User member : members) {
+                member.getFeed().addPost(post);
+            }
+        } else throw new Exception("Uživatel " + post.getAuthor().getUsername() + " není členem skupiny " + this.getName());
+    }
+
     public String getName() {
         return name;
     }

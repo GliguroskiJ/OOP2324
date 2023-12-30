@@ -17,8 +17,13 @@ public class User implements Observer, Observable{
     }
 
     public void addPost(String text) {
-        feed.addPost(new Post(this, text));
-        notifyAboutPost(new Post(this, text));
+        Post post = new Post(this, text);
+        feed.addPost(post);
+        notifyAboutPost(post);
+    }
+    public void addPostTest (Post post){
+        feed.addPost(post);
+        notifyAboutPost(post);
     }
 
     public String getUsername() {

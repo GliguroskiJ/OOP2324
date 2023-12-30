@@ -20,4 +20,8 @@ public class SocialNetwork {
         Group group = new Group(name);
         groups.add(group);
     }
+
+    public List<Group> getGroups() {
+        return groups;
+    }
 }
