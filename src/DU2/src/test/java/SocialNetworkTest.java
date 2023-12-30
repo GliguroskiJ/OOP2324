@@ -67,7 +67,8 @@ public class SocialNetworkTest {
         /*Toto mi přijde, jako nejlepší důkaz toho, že tam ten kokrétní post v tom feedu každého uživatele je ALE
         přijde mi jako totální blbost kvůli tomu vytvářet přímo v kódu metodu pouze pro Testovaní.
         Jinačí způsob jsem na to nenašel takže dokazuji tímto a doufám, že za to nebudou stržené body,
-        kvůli těm nově vytvořeným metodám v projektu samotném, protože to dokázané je. */
+        kvůli těm nově vytvořeným metodám v projektu samotném, protože to dokázané je.
+        Dalo by se to také pravděpodobně dokázat počtem postů ale ten mi nedokazuje konkrétní vytvořené Feedy.*/
 
         assertTrue(u1.getFeed().getPosts().contains(post1));
         assertTrue(u1.getFeed().getPosts().contains(post3));
