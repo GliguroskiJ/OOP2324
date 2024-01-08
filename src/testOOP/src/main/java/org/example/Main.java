@@ -39,6 +39,6 @@ public class Main {
         B1.addGood(eshop, Z1, 2);
         B2.addGood(eshop, Z1, 1);
         B2.emptyCart(eshop);
-        B1.addGood(eshop, Z1, 1);
+        B1.addGood(eshop, Z1, 1); //stale vidi ze nemuze pridat ale zbozi by melo byt vracene po emptycart u B2
     }
 }
