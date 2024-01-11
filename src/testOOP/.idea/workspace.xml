@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="62227c06-320a-4981-88f7-faa07776ef48" name="Changes" comment="com">
+      <change beforePath="$PROJECT_DIR$/../DU2.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/.idea/zork.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/command/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/command/GoCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/command/HelpCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/command/ResetCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/game/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/game/GameData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/game/GameDataImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/game/GameImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/game/Room.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/game/RoomImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/main/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/ui/CommandLineUi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/src/main/test/java/cz/cvut/oop/command/ResetCommandTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/command/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/command/GoCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/command/HelpCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/command/ResetCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/game/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/game/GameData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/game/GameDataImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/game/GameImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/game/Room.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/game/RoomImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/ui/CommandLineUi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zork/zadani.MD" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "state": "OPEN",
+      "assignee": "GliguroskiJ",
+      "author": "GliguroskiJ"
+    }
+  ],
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "GliguroskiJ",
+    "author": "GliguroskiJ"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="61c5fb9e-0e26-4da6-a8c0-9ed043c263bd" />
+        <option name="url" value="git@github.com:GliguroskiJ/OOP2324.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2ag3OVC2rY2DiwvPSC391N6rRxy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/jovangliguroski/Documents/School/FBMI ČVUT/Ing./1. Semester/Objektově orientované programování/Cviceni/src/testOOP",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-abbd5a8d" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="62227c06-320a-4981-88f7-faa07776ef48" name="Changes" comment="" />
+      <created>1704726363913</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704726363913</updated>
+      <workItem from="1704726365809" duration="5781000" />
+      <workItem from="1705006782111" duration="1600000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1704726677402</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704726677402</updated>
+    </task>
+    <task id="LOCAL-00002" summary=".">
+      <option name="closed" value="true" />
+      <created>1704732001731</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704732001731</updated>
+    </task>
+    <task id="LOCAL-00003" summary="com">
+      <option name="closed" value="true" />
+      <created>1704732048915</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704732048915</updated>
+    </task>
+    <task id="LOCAL-00004" summary="com">
+      <option name="closed" value="true" />
+      <created>1705006814011</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705006814011</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="init" />
+    <MESSAGE value="." />
+    <MESSAGE value="com" />
+    <option name="LAST_COMMIT_MESSAGE" value="com" />
+  </component>
+</project>
