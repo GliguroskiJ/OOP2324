@@ -69,7 +69,7 @@ public class GameImpl implements Game {
         String[] args = line.split(" ");
         Command command = commands.getOrDefault(args[0], null);
         if(command != null){
-            result = command.execute(null, gameData);
+            result = command.execute(args, gameData);
         }
         else{
             result = "Neznámý příkaz, zkuste jiný nebo vyzkoušejte příkaz 'help'";

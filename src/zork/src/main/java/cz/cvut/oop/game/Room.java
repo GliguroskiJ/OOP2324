@@ -1,5 +1,7 @@
 package cz.cvut.oop.game;
 
+import cz.cvut.oop.model.Enemy;
+
 import java.util.Collection;
 
 public interface Room {

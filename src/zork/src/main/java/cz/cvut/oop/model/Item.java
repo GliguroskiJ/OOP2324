@@ -1,32 +1,24 @@
 package cz.cvut.oop.model;
 
 public class Item {
-    private int damageFrom;
-    private int damageTo;
+    private int[] damage = new int[2];
     private String name;
     private itemType type;
-    private enum itemType {weapon, key}
+    private enum itemType {weapon, key};
 
-    public Item(int damageFrom, int damageTo, String name) {
-        this.damageFrom = damageFrom;
-        this.damageTo = damageTo;
+    public Item(int[] damage, String name) {
+        this.damage = damage;
         this.name = name;
         this.type = itemType.weapon;
     }
 
     public Item(String name) {
-        this.damageFrom = 0;
-        this.damageTo = 0;
         this.name = name;
         this.type = itemType.key;
     }
 
-    public int getDamageFrom() {
-        return damageFrom;
-    }
-
-    public int getDamageTo() {
-        return damageTo;
+    public int[] getDamage() {
+        return damage;
     }
 
     public String getName() {

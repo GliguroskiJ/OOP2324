@@ -1,5 +1,7 @@
 package cz.cvut.oop.game;
 
+import cz.cvut.oop.model.Enemy;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -11,13 +13,18 @@ public class RoomImpl implements Room {
     private String name;
     private String description;
     private Map<String,Room> exits = new HashMap<>();
+    private Enemy enemy;
 
-
+    public RoomImpl(String name, String description, Enemy enemy){
+        this.name = name;
+        this.description = description;
+        this.enemy = enemy;
+    }
     public RoomImpl(String name, String description){
         this.name = name;
         this.description = description;
+        this.enemy = null;
     }
-
     /**
      *  Adds new exit to map
      */

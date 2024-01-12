@@ -18,8 +18,13 @@ public class Inventory {
         if (inventory.size() < inventorySize) {
             inventory.add(item);
         }
-        else{
-            System.out.println("Není dostatek místa v inventáři, nejprve něco odlož.");
+        else System.out.println("Není dostatek místa v inventáři, nejprve něco odlož");
+    }
+
+    public void removeFromInventory (Item item) {
+        if (inventory.contains(item)) {
+            inventory.remove(item);
         }
+        else System.out.println("Tento item nemáš v inventáři");
     }
 }
