@@ -19,6 +19,7 @@ public class GoCommand implements Command{
             return "neexistujici exit";
         }
         gameData.setCurrentRoom(exitByName);
-        return "Přesunut do místnosti " + gameData.getCurrentRoom().getDescriptionWithExits();
+        return "Přesunut do místnosti " + roomName + "\n" +
+                gameData.getCurrentRoom().toString();
     }
 }

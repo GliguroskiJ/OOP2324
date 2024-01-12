@@ -45,9 +45,9 @@ public class GameImpl implements Game {
     public String welcomeMessage() {
         //TODO doplnit pořádnou uvítací hlášku
         return "Startovní hláška hry, pokud nevíte co a jak, \n" +
-                "použijte příkaz 'help' \n"
-                + gameData.getCurrentRoom().getDescription()
-                + gameData.getCurrentRoom().getDescriptionWithExits();
+                "použijte příkaz 'help' \n" +
+                gameData.getCurrentRoom().toString();
+
     }
 
     /**

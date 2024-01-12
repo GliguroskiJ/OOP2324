@@ -8,11 +8,13 @@ public class Player {
     private int health;
     private Inventory inventory;
     private Item weapon;
+    private boolean dead;
 
     public Player() {
         this.health = 100;
         this.inventory = new Inventory();
         this.weapon = addStartWeapon();
+        this.dead = false;
     }
 
     public Item addStartWeapon() {
@@ -37,4 +39,14 @@ public class Player {
     public void setHealth(int health) {
         this.health = health;
     }
+
+    public boolean isDead() {
+        return dead;
+    }
+
+    public void setDead() {
+        this.dead = true;
+    }
+
+
 }

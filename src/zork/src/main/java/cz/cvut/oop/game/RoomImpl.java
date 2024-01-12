@@ -25,6 +25,17 @@ public class RoomImpl implements Room {
         this.description = description;
         this.enemy = null;
     }
+
+    @Override
+    public String toString() {
+        if (enemy == null){
+            return "Popisek místnosti: " + description + "\n" +
+                    getDescriptionWithExits();
+        }
+        else return "Popisek místnosti: " + description + "\n" +
+                "V místnosti se nachází " + enemy.getName() + " s " + enemy.getHealth() + " životy\n" +
+                getDescriptionWithExits();
+    }
     /**
      *  Adds new exit to map
      */
@@ -44,7 +55,7 @@ public class RoomImpl implements Room {
      */
     @Override
     public String getDescriptionWithExits() {
-        return "východy: " + String.join(", ", this.exits.keySet());
+        return "Možné východy: " + String.join(", ", this.exits.keySet());
     }
 
     /**
