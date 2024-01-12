@@ -6,7 +6,7 @@ import cz.cvut.oop.game.Room;
 public class GoCommand implements Command{
     @Override
     public String getName() {
-        return "jdi";
+        return "go";
     }
 
     @Override

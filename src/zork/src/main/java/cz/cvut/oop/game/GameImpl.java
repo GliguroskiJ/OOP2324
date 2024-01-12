@@ -1,9 +1,6 @@
 package cz.cvut.oop.game;
 
-import cz.cvut.oop.command.Command;
-import cz.cvut.oop.command.GoCommand;
-import cz.cvut.oop.command.HelpCommand;
-import cz.cvut.oop.command.ResetCommand;
+import cz.cvut.oop.command.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,12 +24,14 @@ public class GameImpl implements Game {
      *
      */
     private void registerCommands(){
-        Command help = new HelpCommand(commands);
-        Command reset = new ResetCommand();
+        HelpCommand help = new HelpCommand(commands);
+        ResetCommand reset = new ResetCommand();
         GoCommand go = new GoCommand();
+        StartCommand start = new StartCommand();
         commands.put(help.getName(), help);
         commands.put(reset.getName(), reset);
         commands.put(go.getName(), go);
+        commands.put(start.getName(), start);
     }
 
     /**
@@ -43,7 +42,7 @@ public class GameImpl implements Game {
     public String welcomeMessage() {
         //TODO doplnit pořádnou uvítací hlášku
         return "Startovní hláška hry, pokud nevíte co a jak, \n" +
-                "použijte příkaz 'nápověda' \n"
+                "použijte příkaz 'help' \n"
                 + gameData.getCurrentRoom().getDescription();
     }
 
@@ -73,7 +72,7 @@ public class GameImpl implements Game {
             result = command.execute(null, gameData);
         }
         else{
-            result = "Neznámý příkaz, zkuste jiný nebo vyzkoušejte příkaz 'nápověda'";
+            result = "Neznámý příkaz, zkuste jiný nebo vyzkoušejte příkaz 'help'";
         }
         return result;
     }

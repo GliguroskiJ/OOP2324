@@ -13,12 +13,12 @@ import java.util.Scanner;
 public class CommandLineUi {
     private static final Logger log = LoggerFactory.getLogger(CommandLineUi.class);
     private static CommandLineUi INSTANCE = new CommandLineUi();
-    private Game game = new GameImpl();
+    private Game game;
 
-    public CommandLineUi(){
-
+    private CommandLineUi(){
+        this.game = new GameImpl();
     }
-    //TODO NOT SINGLETON
+
     public static CommandLineUi getInstance(){
         return INSTANCE;
     }
@@ -31,7 +31,7 @@ public class CommandLineUi {
         log.info("application started");
         try(Scanner scanner = new Scanner(System.in)){
             System.out.println(this.game.welcomeMessage());
-            while(this.game.isFinished()){
+            while(!this.game.isFinished()){
                 System.out.print("> ");
                 System.out.println(this.game.processTextCommand(scanner.nextLine()));
             }

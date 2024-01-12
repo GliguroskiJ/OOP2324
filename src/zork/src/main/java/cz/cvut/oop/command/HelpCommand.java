@@ -14,7 +14,7 @@ public class HelpCommand implements Command {
 
     @Override
     public String getName() {
-        return "nápověda";
+        return "help";
     }
 
     @Override
