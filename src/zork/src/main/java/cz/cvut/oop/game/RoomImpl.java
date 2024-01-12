@@ -83,4 +83,9 @@ public class RoomImpl implements Room {
     public int hashCode() {
         return Objects.hash(name);
     }
+
+    @Override
+    public Enemy getEnemy() {
+        return enemy;
+    }
 }

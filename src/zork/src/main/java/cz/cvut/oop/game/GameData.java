@@ -1,5 +1,7 @@
 package cz.cvut.oop.game;
 
+import cz.cvut.oop.model.Player;
+
 import java.util.List;
 
 public interface GameData {
@@ -10,4 +12,5 @@ public interface GameData {
     List<Room> getRooms();
     void setCurrentRoom(Room currentRoom);
     void init();
+    Player getPlayer();
 }

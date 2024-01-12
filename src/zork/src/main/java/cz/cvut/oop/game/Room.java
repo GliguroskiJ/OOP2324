@@ -12,4 +12,5 @@ public interface Room {
     Collection<Room> getExits();
     Room getExitByName(String name);
     void registerExit(Room room);
+    Enemy getEnemy();
 }

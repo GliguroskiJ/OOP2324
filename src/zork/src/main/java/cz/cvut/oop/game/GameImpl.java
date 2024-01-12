@@ -28,10 +28,13 @@ public class GameImpl implements Game {
         ResetCommand reset = new ResetCommand();
         GoCommand go = new GoCommand();
         StartCommand start = new StartCommand();
+        AttackCommand attack = new AttackCommand();
+
         commands.put(help.getName(), help);
         commands.put(reset.getName(), reset);
         commands.put(go.getName(), go);
         commands.put(start.getName(), start);
+        commands.put(attack.getName(), attack);
     }
 
     /**
@@ -43,7 +46,8 @@ public class GameImpl implements Game {
         //TODO doplnit pořádnou uvítací hlášku
         return "Startovní hláška hry, pokud nevíte co a jak, \n" +
                 "použijte příkaz 'help' \n"
-                + gameData.getCurrentRoom().getDescription();
+                + gameData.getCurrentRoom().getDescription()
+                + gameData.getCurrentRoom().getDescriptionWithExits();
     }
 
     /**

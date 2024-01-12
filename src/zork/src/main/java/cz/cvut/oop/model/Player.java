@@ -16,14 +16,25 @@ public class Player {
     }
 
     public Item addStartWeapon() {
-        Item startWeapon = new Item( new int[] {1,4}, "Dřevěná tyčka");
+        Item startWeapon = new Item( new int[] {2,5}, "Dřevěná tyčka");
         //inventory.addToInventory(startWeapon);
         //EquipCommand com = new EquipCommand(startWeapon);
         return startWeapon;
     }
 
     public int getDamage() {
-        return (int) ((Math.random() * (weapon.getDamage()[0] - weapon.getDamage()[1])) + weapon.getDamage()[0]);
+        return (int) ((Math.random() * (weapon.getDamage()[1] - weapon.getDamage()[0])) + weapon.getDamage()[0]);
     }
 
+    public Item getWeapon() {
+        return weapon;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
 }
