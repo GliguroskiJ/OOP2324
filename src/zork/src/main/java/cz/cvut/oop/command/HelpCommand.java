@@ -19,7 +19,7 @@ public class HelpCommand implements Command {
 
     @Override
     public String execute(String[] arguments, GameData gameData) {
-        return "Můžeme znovu vytisknout úvodní příběh, možné příkazy: \n" +
+        return "Všechny možné použitelné příkazy: \n" +
                 "[" + commands.get("help").getName() + "]" + " - Vypíše všechny dostupné příkazy\n" +
                 "[" + commands.get("reset").getName() + "]" + " - Restartuje celou hru\n" +
                 "[" + commands.get("go").getName() + " 'room']" + " - Vstoupíš do místnosti 'room'\n" +

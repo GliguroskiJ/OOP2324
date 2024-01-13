@@ -13,6 +13,8 @@ public class GoCommand implements Command{
 
     @Override
     public String execute(String[] arguments, GameData gameData) {
+        if (arguments.length < 2) return "Špatně zadaný příkaz. Pro více info použij příkaz [help]";
+
         Player player = gameData.getPlayer();
         String roomName = arguments[1];
         Room exitByName = gameData.getCurrentRoom().getExitByName(roomName);

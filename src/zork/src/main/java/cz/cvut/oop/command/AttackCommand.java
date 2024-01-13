@@ -15,7 +15,7 @@ public class AttackCommand implements Command {
         Player player = gameData.getPlayer();
         Enemy enemy = gameData.getCurrentRoom().getEnemy();
 
-        if((player.getWeapon() != null) && (!enemy.isDead()) && (!player.isDead())){
+        if((player.getWeapon() != null) && (!enemy.isDead()) && (!player.isDead()) && !gameData.getCurrentRoom().isEnemyNull()){
             int damageToEnemy = player.getDamage();
             int damageToPlayer = enemy.getDamage();
 
@@ -39,8 +39,9 @@ public class AttackCommand implements Command {
 
             } else return "Nepřítel obrdžel " + damageToEnemy + " bodů poškození a aktuálně má " + enemy.getHealth() + " životů\n" +
                     "Ty si obdržel " + damageToPlayer + " bodů poškození a aktuálně máš " + player.getHealth() + " životů";
-        }
-        else if (enemy.isDead()) {
+        } else if (gameData.getCurrentRoom().isEnemyNull()) {
+            return "Není na koho útočit";
+        } else if (enemy.isDead()) {
             return "Nepřítel je již po smrti!";
         } else return "Nejprve si nasaď braň!";
     }
