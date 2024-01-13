@@ -18,8 +18,6 @@ public class LookCommand implements Command{
         } else enemyVypis = gameData.getCurrentRoom().getEnemy().getName();
 
         return "Rozhlédl si se po místnosti " + gameData.getCurrentRoom().getName() + "\n" +
-                "Komentář k místnosti: " + gameData.getCurrentRoom().getDescription() + "\n" +
-                gameData.getPlayer().getInventory().listItemsInInventory() + "\n" +
                 "<------------------------------------------------------>\n" +
                 "[attack] - " + enemyVypis + "\n" +
                 "[go 'room'] - " + gameData.getCurrentRoom().getDescriptionWithExits() + "\n" +

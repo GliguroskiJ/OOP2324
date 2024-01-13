@@ -32,11 +32,13 @@ public class GoCommand implements Command{
             healthAfterAttack = player.getHealth();
 
             gameData.setCurrentRoom(exitByName);
-            return "Přesunut do místnosti " + roomName + "\n" +
-                    "Obdržel si " + enemyDamage + " bodů poškození a aktuálně máš " + healthAfterAttack + " životů";
+            return "Přesunul si se do místnosti " + roomName + "\n" +
+                    vypisMistnosti(gameData) +
+                    "\nObdržel si " + enemyDamage + " bodů poškození a aktuálně máš " + healthAfterAttack + " životů";
         } else if (gameData.getCurrentRoom().getEnemy() == null) {
             gameData.setCurrentRoom(exitByName);
-            return "Přesunut do místnosti " + roomName;
+            return "Přesunul si se do místnosti " + roomName + "\n" +
+                    vypisMistnosti(gameData);
                     //gameData.getCurrentRoom().toString();
         } else if (!gameData.getCurrentRoom().getEnemy().isDead() && (gameData.exitRoom(exitByName))) {
             int healthAfterAttack;
@@ -45,8 +47,9 @@ public class GoCommand implements Command{
             healthAfterAttack = player.getHealth();
 
             gameData.setCurrentRoom(exitByName);
-            return "Přesunut do místnosti " + roomName + "\n" +
-                    "Obdržel si " + enemyDamage + " bodů poškození a aktuálně máš " + healthAfterAttack + " životů";
+            return "Přesunul si se do místnosti " + roomName + "\n" +
+                    vypisMistnosti(gameData) +
+                    "\nObdržel si " + enemyDamage + " bodů poškození a aktuálně máš " + healthAfterAttack + " životů";
         } else if (!gameData.getCurrentRoom().getEnemy().isDead()) {
             return "Nejprve se musíš dostat přes nepřítele, který ti stojí v cestě!";
         } else if (gameData.getCurrentRoom().getExitByName(roomName).getEnemy().getType() == Enemy.enemyType.boss) {
@@ -55,12 +58,14 @@ public class GoCommand implements Command{
             }
             else {
                 gameData.setCurrentRoom(exitByName);
-                return "Přesunut do místnosti " + roomName;
+                return "Přesunul si se do místnosti " + roomName + "\n" +
+                        vypisMistnosti(gameData);
                         //gameData.getCurrentRoom().toString();
             }
         } else {
             gameData.setCurrentRoom(exitByName);
-            return "Přesunut do místnosti " + roomName;
+            return "Přesunul si se do místnosti " + roomName + "\n" +
+                    vypisMistnosti(gameData);
                     //gameData.getCurrentRoom().toString();
         }
 
@@ -69,5 +74,16 @@ public class GoCommand implements Command{
             return "Přesunut do místnosti " + roomName +
                     "Ty si obdržel " + damageToPlayer + " bodů poškození a aktuálně máš " + player.getHealth() + " životů";
         }*/
+    }
+
+    public String vypisMistnosti(GameData gameData){
+        if (gameData.getPlayer().getWeapon() == null){
+            return "Komentář k místnosti: " + gameData.getCurrentRoom().getDescription() + "\n" +
+                    "V ruce nemáš žádný předmět" + "\n" +
+                    gameData.getPlayer().getInventory().listItemsInInventory();
+        }
+        else return "Komentář k místnosti: " + gameData.getCurrentRoom().getDescription() + "\n" +
+                "V ruce máš " + gameData.getPlayer().getWeapon().getName() + " s poškozením od " + gameData.getPlayer().getWeapon().getDamage()[0] + " do " + gameData.getPlayer().getWeapon().getDamage()[1] + "\n" +
+                gameData.getPlayer().getInventory().listItemsInInventory();
     }
 }

@@ -10,14 +10,13 @@ public class Player {
     private Item weapon;
 
     public Player() {
-        this.health = 100;
+        this.health = 130;
         this.inventory = new Inventory();
         this.weapon = null;
     }
 
     public int getDamage() {
-        //return (int) ((Math.random() * (weapon.getDamage()[1] - weapon.getDamage()[0])) + weapon.getDamage()[0]);
-        return 1000;
+        return (int) ((Math.random() * (weapon.getDamage()[1] - weapon.getDamage()[0])) + weapon.getDamage()[0]);
     }
 
     public Item getWeapon() {

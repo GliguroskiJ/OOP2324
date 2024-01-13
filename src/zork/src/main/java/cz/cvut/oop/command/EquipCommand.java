@@ -47,7 +47,7 @@ public class EquipCommand implements Command{
             return "Do ruky sis dal předmět " + newWeapon.getName() + " se sílou útoku od " + newWeapon.getDamage()[0] + " do " + newWeapon.getDamage()[1] + "\n" +
                     player.getInventory().listItemsInInventory();
 
-        } else if (inventoryMap.containsKey(weaponToEquip) && (inventoryMap.get(weaponToEquip).getType() == Item.itemType.weapon) && (!enemy.isDead()) || !gameData.getCurrentRoom().isEnemyNull()) {
+        } else if ((inventoryMap.containsKey(weaponToEquip)) && (inventoryMap.get(weaponToEquip).getType() == Item.itemType.weapon) && ((!enemy.isDead()) || !gameData.getCurrentRoom().isEnemyNull())) {
             int healthAfterAttack;
             int enemyDamage = enemy.getDamage();
             player.setHealth(player.getHealth()-enemyDamage);
@@ -60,9 +60,10 @@ public class EquipCommand implements Command{
             return "Do ruky sis dal předmět " + newWeapon.getName() + " se sílou útoku od " + newWeapon.getDamage()[0] + " do " + newWeapon.getDamage()[1] + "\n" +
                     "Obdržel si " + enemyDamage + " bodů poškození a aktuálně máš " + healthAfterAttack + " životů" + "\n" +
                     player.getInventory().listItemsInInventory();
+
         } else if (inventoryMap.containsKey(weaponToEquip) && inventoryMap.get(weaponToEquip).getType() == Item.itemType.key) {
             return "Tento předmět si nemůžeš nasadit";
-        }
-        else return "Takový předmět v inventáři nemáš";
+
+        } else return "Takový předmět v inventáři nemáš";
     }
 }
