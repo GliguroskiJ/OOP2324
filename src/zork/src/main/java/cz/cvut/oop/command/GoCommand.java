@@ -15,8 +15,8 @@ public class GoCommand implements Command{
     public String execute(String[] arguments, GameData gameData) {
         Player player = gameData.getPlayer();
         String roomName = arguments[1];
-
         Room exitByName = gameData.getCurrentRoom().getExitByName(roomName);
+
         if(exitByName == null){
             return "Takový exit neexistuje";
         }
@@ -43,5 +43,11 @@ public class GoCommand implements Command{
             return "Přesunut do místnosti " + roomName;
                     //gameData.getCurrentRoom().toString();
         }
+
+        /*else if (!gameData.getCurrentRoom().getEnemy().isDead() && (player.getWeapon() == null)) {
+            gameData.setCurrentRoom(exitByName);
+            return "Přesunut do místnosti " + roomName +
+                    "Ty si obdržel " + damageToPlayer + " bodů poškození a aktuálně máš " + player.getHealth() + " životů";
+        }*/
     }
 }

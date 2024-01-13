@@ -21,8 +21,6 @@ public class LookCommand implements Command{
                 "<------------------------------------------------------>\n" +
                 "[attack] - " + gameData.getCurrentRoom().getEnemy().lookForEnemy() + "\n" +
                 "[go 'room'] - " + gameData.getCurrentRoom().getDescriptionWithExits() + "\n" +
-                "[take 'item'] - " + gameData.getCurrentRoom().lookOnFloor() + "\n" +
-                "[equip 'item'] - Nasadíš si předmět z inventáře\n" +
-                "[drop 'item'] - Položíš předmět z inventáře na zem";
+                "[take 'item'] - " + gameData.getCurrentRoom().lookOnFloor();
     }
 }

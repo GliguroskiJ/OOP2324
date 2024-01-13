@@ -12,13 +12,7 @@ public class Player {
     public Player() {
         this.health = 100;
         this.inventory = new Inventory();
-        this.weapon = addStartWeapon();
-    }
-
-    public Item addStartWeapon() {
-        Item startWeapon = new Item( new int[] {2,5}, "klacek");
-        //inventory.addToInventory(startWeapon);
-        return startWeapon;
+        this.weapon = null;
     }
 
     public int getDamage() {
@@ -48,9 +42,15 @@ public class Player {
     }
 
     public Item swapWeapons (Item item){
-        Item curentWeapon = weapon;
-        this.weapon = item;
-        inventory.addToInventory(curentWeapon);
-        return weapon;
+        if (weapon == null ) {
+            this.weapon = item;
+            return weapon;
+        }
+        else {
+            Item curentWeapon = weapon;
+            this.weapon = item;
+            inventory.addToInventory(curentWeapon);
+            return weapon;
+        }
     }
 }

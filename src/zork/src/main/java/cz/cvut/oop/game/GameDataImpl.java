@@ -34,13 +34,20 @@ public class GameDataImpl implements GameData {
         Room larder = new RoomImpl("spizirna", "Takového jídla...", new Enemy("Myš", new int[]{1,2}, 10, Enemy.enemyType.normal, new Item("klic")));
         Room workRoom = new RoomImpl("pracoviste", "Ten majitel je fakt tlustej", new Enemy("Majitel", new int[]{15,20}, 70, Enemy.enemyType.boss, null));
 
+        corridor.getFloor().add(new Item( new int[] {2,5}, "klacek"));
+
         corridor.registerExit(library);
         library.registerExit(bedroom);
+        library.registerExit(corridor);
         bedroom.registerExit(kitchen);
+        bedroom.registerExit(library);
         kitchen.registerExit(livingRoom);
+        kitchen.registerExit(bedroom);
         livingRoom.registerExit(larder);
         livingRoom.registerExit(workRoom);
+        livingRoom.registerExit(kitchen);
         larder.registerExit(livingRoom);
+        workRoom.registerExit(livingRoom);
 
         rooms.add(corridor);
         rooms.add(library);

@@ -15,10 +15,12 @@ public class Inventory {
     }
 
     public void addToInventory (Item item) {
-        if (inventory.size() < inventorySize) {
-            inventory.add(item);
-        }
-        else System.out.println("Není dostatek místa v inventáři, nejprve něco odlož");
+        inventory.add(item);
+    }
+
+    public boolean isSpace () {
+        if (inventory.size() < inventorySize) return true;
+        else return false;
     }
 
     public void removeFromInventory (Item item) {

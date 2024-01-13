@@ -26,7 +26,7 @@ public class RoomImpl implements Room {
         this.name = name;
         this.description = description;
         this.enemy = null;
-        this.floor = null;
+        this.floor = new ArrayList<>();
     }
 
     @Override
