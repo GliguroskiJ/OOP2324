@@ -29,12 +29,14 @@ public class GameImpl implements Game {
         GoCommand go = new GoCommand();
         StartCommand start = new StartCommand();
         AttackCommand attack = new AttackCommand();
+        TakeCommand take = new TakeCommand();
 
         commands.put(help.getName(), help);
         commands.put(reset.getName(), reset);
         commands.put(go.getName(), go);
         commands.put(start.getName(), start);
         commands.put(attack.getName(), attack);
+        commands.put(take.getName(), take);
     }
 
     /**

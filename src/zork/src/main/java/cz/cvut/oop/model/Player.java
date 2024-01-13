@@ -25,7 +25,8 @@ public class Player {
     }
 
     public int getDamage() {
-        return (int) ((Math.random() * (weapon.getDamage()[1] - weapon.getDamage()[0])) + weapon.getDamage()[0]);
+        //return (int) ((Math.random() * (weapon.getDamage()[1] - weapon.getDamage()[0])) + weapon.getDamage()[0]);
+        return 1000;
     }
 
     public Item getWeapon() {
@@ -48,5 +49,7 @@ public class Player {
         this.dead = true;
     }
 
-
+    public Inventory getInventory() {
+        return inventory;
+    }
 }

@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class CommandLineUi {
     private static final Logger log = LoggerFactory.getLogger(CommandLineUi.class);
     private static CommandLineUi INSTANCE;
-    private Game game = new GameImpl();;
+    private Game game = new GameImpl();
 
     private CommandLineUi(){
         //this.game = new GameImpl();

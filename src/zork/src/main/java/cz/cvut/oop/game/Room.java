@@ -1,7 +1,9 @@
 package cz.cvut.oop.game;
 
 import cz.cvut.oop.model.Enemy;
+import cz.cvut.oop.model.Item;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 public interface Room {
@@ -13,4 +15,5 @@ public interface Room {
     Room getExitByName(String name);
     void registerExit(Room room);
     Enemy getEnemy();
+    ArrayList<Item> getFloor();
 }

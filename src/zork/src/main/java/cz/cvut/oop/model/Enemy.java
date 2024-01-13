@@ -7,12 +7,17 @@ public class Enemy {
     private int[] damage;
     private int health;
     private boolean dead;
+    private enemyType type;
+    private Item itemDrop;
+    public enum enemyType {normal, boss}
 
-    public Enemy(String name, int[] damage, int health) {
+    public Enemy(String name, int[] damage, int health, enemyType type, Item itemDrop) {
         this.name = name;
         this.damage = damage;
         this.health = health;
         this.dead = false;
+        this.type = type;
+        this.itemDrop = itemDrop;
     }
 
     public String getName() {
@@ -37,5 +42,13 @@ public class Enemy {
 
     public boolean isDead() {
         return dead;
+    }
+
+    public enemyType getType() {
+        return type;
+    }
+
+    public Item dropItem() {
+        return itemDrop;
     }
 }

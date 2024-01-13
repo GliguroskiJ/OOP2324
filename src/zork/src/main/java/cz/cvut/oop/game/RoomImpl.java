@@ -1,6 +1,6 @@
 package cz.cvut.oop.game;
 
-import cz.cvut.oop.model.Enemy;
+import cz.cvut.oop.model.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -14,16 +14,19 @@ public class RoomImpl implements Room {
     private String description;
     private Map<String,Room> exits = new HashMap<>();
     private Enemy enemy;
+    private ArrayList<Item> floor;
 
     public RoomImpl(String name, String description, Enemy enemy){
         this.name = name;
         this.description = description;
         this.enemy = enemy;
+        this.floor = new ArrayList<>();
     }
     public RoomImpl(String name, String description){
         this.name = name;
         this.description = description;
         this.enemy = null;
+        this.floor = null;
     }
 
     @Override
@@ -98,5 +101,9 @@ public class RoomImpl implements Room {
     @Override
     public Enemy getEnemy() {
         return enemy;
+    }
+
+    public ArrayList<Item> getFloor() {
+        return floor;
     }
 }
