@@ -20,6 +20,10 @@ public class GoCommand implements Command{
         if(exitByName == null){
             return "Takový exit neexistuje";
         }
+        else if (gameData.getCurrentRoom().getExitByName(roomName).isEnemyNull()) {
+            gameData.setCurrentRoom(exitByName);
+            return "Přesunut do místnosti " + roomName;
+        }
         else if (gameData.getCurrentRoom().getEnemy() == null) {
             gameData.setCurrentRoom(exitByName);
             return "Přesunut do místnosti " + roomName;
@@ -29,7 +33,7 @@ public class GoCommand implements Command{
             return "Nejprve se musíš dostat přes nepřítele, který ti stojí v cestě!";
         }
         else if (gameData.getCurrentRoom().getExitByName(roomName).getEnemy().getType() == Enemy.enemyType.boss) {
-            if (!player.getInventory().getInventory().contains(gameData.getCurrentRoom().getExitByName("spizirna").getEnemy().dropItem())) {
+            if (!player.getInventory().openInventory().contains(gameData.getCurrentRoom().getExitByName("spizirna").getEnemy().dropItem())) {
                 return "Ke vstupu do místnosti potřebuješ klíč!";
             }
             else {

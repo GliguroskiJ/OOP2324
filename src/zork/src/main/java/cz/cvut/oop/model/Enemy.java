@@ -50,4 +50,5 @@ public class Enemy {
         else if (!isDead()) return name;
         else return "Zde se nenachází žádný nepřítel";
     }
+
 }

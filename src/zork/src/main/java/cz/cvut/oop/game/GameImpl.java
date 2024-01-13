@@ -27,22 +27,22 @@ public class GameImpl implements Game {
         HelpCommand help = new HelpCommand(commands);
         ResetCommand reset = new ResetCommand();
         GoCommand go = new GoCommand();
-        StartCommand start = new StartCommand();
         AttackCommand attack = new AttackCommand();
         TakeCommand take = new TakeCommand();
         LookCommand look = new LookCommand();
         EquipCommand equip = new EquipCommand();
         DropCommand drop = new DropCommand();
+        EndCommand end = new EndCommand();
 
         commands.put(help.getName(), help);
         commands.put(reset.getName(), reset);
         commands.put(go.getName(), go);
-        commands.put(start.getName(), start);
         commands.put(attack.getName(), attack);
         commands.put(take.getName(), take);
         commands.put(look.getName(), look);
         commands.put(equip.getName(), equip);
         commands.put(drop.getName(), drop);
+        commands.put(end.getName(), end);
     }
 
     /**

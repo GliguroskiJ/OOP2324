@@ -21,15 +21,15 @@ public class DropCommand implements Command{
         String itemToDrop = arguments[1];
         Map<String, Item> inventoryMap = new HashMap<>();
 
-        if (player.getInventory().getInventory().isEmpty()) return "Máš prázdný inventář";
+        if (player.getInventory().openInventory().isEmpty()) return "Máš prázdný inventář";
         else {
-            for (int i = 0; i < player.getInventory().getInventory().size(); i++){
-                inventoryMap.put(player.getInventory().getInventory().get(i).getName(), player.getInventory().getInventory().get(i));
+            for (int i = 0; i < player.getInventory().openInventory().size(); i++){
+                inventoryMap.put(player.getInventory().openInventory().get(i).getName(), player.getInventory().openInventory().get(i));
             }
         }
 
         if (inventoryMap.containsKey(itemToDrop)) {
-            player.getInventory().getInventory().remove(inventoryMap.get(itemToDrop));
+            player.getInventory().openInventory().remove(inventoryMap.get(itemToDrop));
             room.getFloor().add(inventoryMap.get(itemToDrop));
 
             return "Na zem si položil předmět " + itemToDrop;

@@ -21,16 +21,16 @@ public class EquipCommand implements Command{
         Player player = gameData.getPlayer();
         Map<String, Item> inventoryMap = new HashMap<>();
 
-        if (player.getInventory().getInventory().isEmpty()) return "Máš prázdný inventář";
+        if (player.getInventory().openInventory().isEmpty()) return "Máš prázdný inventář";
         else {
-            for (int i = 0; i < player.getInventory().getInventory().size(); i++){
-                inventoryMap.put(player.getInventory().getInventory().get(i).getName(), player.getInventory().getInventory().get(i));
+            for (int i = 0; i < player.getInventory().openInventory().size(); i++){
+                inventoryMap.put(player.getInventory().openInventory().get(i).getName(), player.getInventory().openInventory().get(i));
             }
         }
 
         if (inventoryMap.containsKey(weaponToEquip) && inventoryMap.get(weaponToEquip).getType() == Item.itemType.weapon) {
             weapon = inventoryMap.get(weaponToEquip);
-            player.getInventory().getInventory().remove(inventoryMap.get(weaponToEquip));
+            player.getInventory().openInventory().remove(inventoryMap.get(weaponToEquip));
             inventoryMap.remove(weaponToEquip);
             newWeapon = player.swapWeapons(weapon);
             return "Do ruky sis dal předmět " + newWeapon.getName() + " se sílou útoku od " + newWeapon.getDamage()[0] + " do " + newWeapon.getDamage()[1] + "\n" +

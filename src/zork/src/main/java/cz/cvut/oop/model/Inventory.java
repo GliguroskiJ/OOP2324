@@ -10,7 +10,7 @@ public class Inventory {
         this.inventory = new ArrayList<>();
     }
 
-    public ArrayList<Item> getInventory() {
+    public ArrayList<Item> openInventory() {
         return inventory;
     }
 
@@ -32,7 +32,7 @@ public class Inventory {
 
     public String listItemsInInventory() {
         ArrayList<String> itemNames = new ArrayList<>();
-        if (getInventory().isEmpty()) return "V inventáři aktuálně nemáš žadný předmět";
+        if (openInventory().isEmpty()) return "V inventáři aktuálně nemáš žadný předmět";
         else {
             for (int i = 0; i < inventory.size(); i++){
                 itemNames.add(inventory.get(i).getName());
