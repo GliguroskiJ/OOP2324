@@ -5,7 +5,6 @@ import cz.cvut.oop.model.*;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class EquipCommand implements Command{
 
@@ -35,7 +34,7 @@ public class EquipCommand implements Command{
             inventoryMap.remove(weaponToEquip);
             newWeapon = player.swapWeapons(weapon);
             return "Do ruky sis dal předmět " + newWeapon.getName() + " se sílou útoku od " + newWeapon.getDamage()[0] + " do " + newWeapon.getDamage()[1] + "\n" +
-                    "V inventáři máš aktuálně " + player.getInventory().listItemsInInventory();
+                    player.getInventory().listItemsInInventory();
 
         } else if (inventoryMap.containsKey(weaponToEquip) && inventoryMap.get(weaponToEquip).getType() == Item.itemType.key) {
             return "Tento předmět si nemůžeš nasadit";

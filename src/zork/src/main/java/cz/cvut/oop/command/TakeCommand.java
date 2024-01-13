@@ -28,7 +28,7 @@ public class TakeCommand implements Command{
             gameData.getCurrentRoom().getFloor().remove(itemMap.get(selectedItem));
             itemMap.remove(selectedItem);
             return "Předmět " + selectedItem + " byl přidán do inventáře\n"+
-                    "V inventáři máš aktuálně " + player.getInventory().listItemsInInventory();
+                    player.getInventory().listItemsInInventory();
         }
         else return "Takový předmět na zemi není";
     }

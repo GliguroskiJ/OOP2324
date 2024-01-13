@@ -30,9 +30,12 @@ public class Inventory {
 
     public String listItemsInInventory() {
         ArrayList<String> itemNames = new ArrayList<>();
-        for (int i = 0; i < inventory.size(); i++){
-            itemNames.add(inventory.get(i).getName());
+        if (getInventory().isEmpty()) return "V inventáři aktuálně nemáš žadný předmět";
+        else {
+            for (int i = 0; i < inventory.size(); i++){
+                itemNames.add(inventory.get(i).getName());
+            }
+            return "V inventáři máš aktuálně " + String.join(", ", itemNames);
         }
-        return String.join(", ", itemNames);
     }
 }

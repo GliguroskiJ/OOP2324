@@ -32,6 +32,7 @@ public class GameImpl implements Game {
         TakeCommand take = new TakeCommand();
         LookCommand look = new LookCommand();
         EquipCommand equip = new EquipCommand();
+        DropCommand drop = new DropCommand();
 
         commands.put(help.getName(), help);
         commands.put(reset.getName(), reset);
@@ -41,6 +42,7 @@ public class GameImpl implements Game {
         commands.put(take.getName(), take);
         commands.put(look.getName(), look);
         commands.put(equip.getName(), equip);
+        commands.put(drop.getName(), drop);
     }
 
     /**
