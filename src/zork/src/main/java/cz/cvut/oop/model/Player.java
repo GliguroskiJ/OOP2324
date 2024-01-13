@@ -48,8 +48,9 @@ public class Player {
     }
 
     public Item swapWeapons (Item item){
-        Item curentWeapon = inventory.getInventory().get(0);
+        Item curentWeapon = weapon;
         this.weapon = item;
-        return curentWeapon;
+        inventory.addToInventory(curentWeapon);
+        return weapon;
     }
 }

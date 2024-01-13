@@ -3,6 +3,8 @@ package cz.cvut.oop.command;
 import cz.cvut.oop.game.GameData;
 import cz.cvut.oop.model.*;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class EquipCommand implements Command{
@@ -15,18 +17,29 @@ public class EquipCommand implements Command{
     @Override
     public String execute(String[] arguments, GameData gameData) {
         String weaponToEquip = arguments[1];
-        Item weapon = null;
-        Item newWeapon = null;
+        Item weapon;
+        Item newWeapon;
         Player player = gameData.getPlayer();
+        Map<String, Item> inventoryMap = new HashMap<>();
 
-        for (int i = 0; i < gameData.getCurrentRoom().getFloor().size(); i++){
-            if ((Objects.equals(gameData.getCurrentRoom().getFloor().get(i).getName(), weaponToEquip))) {
-                weapon = gameData.getCurrentRoom().getFloor().get(i);
-                newWeapon = player.swapWeapons(weapon);
+        if (player.getInventory().getInventory().isEmpty()) return "Máš prázdný inventář";
+        else {
+            for (int i = 0; i < player.getInventory().getInventory().size(); i++){
+                inventoryMap.put(player.getInventory().getInventory().get(i).getName(), player.getInventory().getInventory().get(i));
             }
-            else if (!(gameData.getCurrentRoom().getFloor().get(i).getName().equals(weaponToEquip))) return "Takový předmět se tu nenachází";
         }
 
-        return "Do ruky sis dal " + newWeapon.getName() + "se sílou útoku od " + newWeapon.getDamage()[0] + " do " + newWeapon.getDamage()[1];
+        if (inventoryMap.containsKey(weaponToEquip) && inventoryMap.get(weaponToEquip).getType() == Item.itemType.weapon) {
+            weapon = inventoryMap.get(weaponToEquip);
+            player.getInventory().getInventory().remove(inventoryMap.get(weaponToEquip));
+            inventoryMap.remove(weaponToEquip);
+            newWeapon = player.swapWeapons(weapon);
+            return "Do ruky sis dal předmět " + newWeapon.getName() + " se sílou útoku od " + newWeapon.getDamage()[0] + " do " + newWeapon.getDamage()[1] + "\n" +
+                    "V inventáři máš aktuálně " + player.getInventory().listItemsInInventory();
+
+        } else if (inventoryMap.containsKey(weaponToEquip) && inventoryMap.get(weaponToEquip).getType() == Item.itemType.key) {
+            return "Tento předmět si nemůžeš nasadit";
+        }
+        else return "Takový předmět v inventáři nemáš";
     }
 }

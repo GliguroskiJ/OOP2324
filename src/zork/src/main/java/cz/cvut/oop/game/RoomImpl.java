@@ -123,8 +123,4 @@ public class RoomImpl implements Room {
             return String.join(", ", itemNames);
         }
     }
-
-    public ArrayList<Item> getFloor() {
-        return floor;
-    }
 }

@@ -24,11 +24,11 @@ public class TakeCommand implements Command{
         }
 
         if (itemMap.containsKey(selectedItem)){
-            player.getInventory().getInventory().add(itemMap.get(selectedItem));
-            itemMap.remove(selectedItem);
+            player.getInventory().addToInventory(itemMap.get(selectedItem));
             gameData.getCurrentRoom().getFloor().remove(itemMap.get(selectedItem));
+            itemMap.remove(selectedItem);
             return "Předmět " + selectedItem + " byl přidán do inventáře\n"+
-                    "V inventáří máš aktuálně " + player.getInventory().listItemsInInventory();
+                    "V inventáři máš aktuálně " + player.getInventory().listItemsInInventory();
         }
         else return "Takový předmět na zemi není";
     }
