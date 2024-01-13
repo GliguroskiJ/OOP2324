@@ -16,5 +16,6 @@ public interface Room {
     void registerExit(Room room);
     Enemy getEnemy();
     ArrayList<Item> getFloor();
-    public String lookOnFloor();
+    String lookOnFloor();
+    boolean isEnemyNull();
 }

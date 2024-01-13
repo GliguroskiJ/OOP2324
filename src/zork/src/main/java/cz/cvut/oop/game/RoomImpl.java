@@ -100,12 +100,18 @@ public class RoomImpl implements Room {
 
     @Override
     public Enemy getEnemy() {
-        if (enemy == null){
-            return null;
-        }
-        else return enemy;
+        return enemy;
     }
 
+    @Override
+    public boolean isEnemyNull() {
+        if (enemy == null){
+            return true;
+        }
+        else return false;
+    }
+
+    @Override
     public ArrayList<Item> getFloor() {
         return floor;
     }
