@@ -1,5 +1,7 @@
 package cz.cvut.oop.model;
 
+import cz.cvut.oop.game.GameData;
+
 public class Enemy {
     private String name;
     private int[] damage;
