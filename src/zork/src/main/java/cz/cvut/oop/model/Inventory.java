@@ -27,4 +27,12 @@ public class Inventory {
         }
         else System.out.println("Tento item nemáš v inventáři");
     }
+
+    public String listItemsInInventory() {
+        ArrayList<String> itemNames = new ArrayList<>();
+        for (int i = 0; i < inventory.size(); i++){
+            itemNames.add(inventory.get(i).getName());
+        }
+        return String.join(", ", itemNames);
+    }
 }

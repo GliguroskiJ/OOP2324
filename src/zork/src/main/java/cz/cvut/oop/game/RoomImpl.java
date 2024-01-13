@@ -1,6 +1,6 @@
 package cz.cvut.oop.game;
 
-import cz.cvut.oop.model.Enemy;
+import cz.cvut.oop.model.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -14,16 +14,19 @@ public class RoomImpl implements Room {
     private String description;
     private Map<String,Room> exits = new HashMap<>();
     private Enemy enemy;
+    private ArrayList<Item> floor;
 
     public RoomImpl(String name, String description, Enemy enemy){
         this.name = name;
         this.description = description;
         this.enemy = enemy;
+        this.floor = new ArrayList<>();
     }
     public RoomImpl(String name, String description){
         this.name = name;
         this.description = description;
         this.enemy = null;
+        this.floor = null;
     }
 
     @Override
@@ -55,7 +58,7 @@ public class RoomImpl implements Room {
      */
     @Override
     public String getDescriptionWithExits() {
-        return "Možné východy: " + String.join(", ", this.exits.keySet());
+        return String.join(", ", this.exits.keySet());
     }
 
     /**
@@ -97,6 +100,27 @@ public class RoomImpl implements Room {
 
     @Override
     public Enemy getEnemy() {
-        return enemy;
+        if (enemy == null){
+            return null;
+        }
+        else return enemy;
+    }
+
+    public ArrayList<Item> getFloor() {
+        return floor;
+    }
+
+    @Override
+    public String lookOnFloor() {
+        if (getFloor().isEmpty()){
+            return "Na zemi nejsou žádné předměty";
+        }
+        else {
+            ArrayList<String> itemNames = new ArrayList<>();
+            for (int i = 0; i < getFloor().size(); i++){
+                itemNames.add(getFloor().get(i).getName());
+            }
+            return String.join(", ", itemNames);
+        }
     }
 }

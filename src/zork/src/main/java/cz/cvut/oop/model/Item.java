@@ -4,7 +4,7 @@ public class Item {
     private int[] damage = new int[2];
     private String name;
     private itemType type;
-    private enum itemType {weapon, key};
+    enum itemType {weapon, key};
 
     public Item(int[] damage, String name) {
         this.damage = damage;

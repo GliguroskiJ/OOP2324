@@ -1,18 +1,19 @@
 package cz.cvut.oop.model;
 
-import java.util.Random;
-
 public class Enemy {
     private String name;
     private int[] damage;
     private int health;
-    private boolean dead;
+    private enemyType type;
+    private Item itemDrop;
+    public enum enemyType {normal, boss}
 
-    public Enemy(String name, int[] damage, int health) {
+    public Enemy(String name, int[] damage, int health, enemyType type, Item itemDrop) {
         this.name = name;
         this.damage = damage;
         this.health = health;
-        this.dead = false;
+        this.type = type;
+        this.itemDrop = itemDrop;
     }
 
     public String getName() {
@@ -31,11 +32,22 @@ public class Enemy {
         this.health = health;
     }
 
-    public void setDead() {
-        this.dead = true;
+    public boolean isDead() {
+        if (health <= 0) return true;
+        return false;
     }
 
-    public boolean isDead() {
-        return dead;
+    public enemyType getType() {
+        return type;
+    }
+
+    public Item dropItem() {
+        return itemDrop;
+    }
+
+    public String lookForEnemy() {
+        if (isDead()) return "Nepřítel je mrtev";
+        else if (!isDead()) return name;
+        else return "Zde se nenachází žádný nepřítel";
     }
 }
