@@ -12,7 +12,7 @@ public class LookCommand implements Command{
     public String execute(String[] arguments, GameData gameData) {
         String enemyVypis;
 
-        if (gameData.getCurrentRoom().isEnemyNull()) enemyVypis = "Zde se nenachází žádný nepřítel"; //nefukční
+        if (gameData.getCurrentRoom().isEnemyNull()) enemyVypis = "Zde se nenachází žádný nepřítel";
         else if (gameData.getCurrentRoom().getEnemy().isDead()) {
             enemyVypis = "Nepřítel je mrtev";
         } else enemyVypis = gameData.getCurrentRoom().getEnemy().getName();

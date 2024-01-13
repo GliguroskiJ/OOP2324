@@ -5,6 +5,8 @@ import cz.cvut.oop.game.Room;
 import cz.cvut.oop.model.Enemy;
 import cz.cvut.oop.model.Player;
 
+import java.util.Objects;
+
 public class GoCommand implements Command{
     @Override
     public String getName() {
@@ -21,20 +23,19 @@ public class GoCommand implements Command{
 
         if(exitByName == null){
             return "Takový exit neexistuje";
-        }
-        else if (gameData.getCurrentRoom().getExitByName(roomName).isEnemyNull()) {
+        } else if (gameData.getCurrentRoom().getExitByName(roomName).isEnemyNull()) {
             gameData.setCurrentRoom(exitByName);
             return "Přesunut do místnosti " + roomName;
-        }
-        else if (gameData.getCurrentRoom().getEnemy() == null) {
+        } else if (gameData.getCurrentRoom().getEnemy() == null) {
             gameData.setCurrentRoom(exitByName);
             return "Přesunut do místnosti " + roomName;
                     //gameData.getCurrentRoom().toString();
-        }
-        else if (!gameData.getCurrentRoom().getEnemy().isDead()) {
+        } else if (!gameData.getCurrentRoom().getEnemy().isDead() && (gameData.exitRoom(exitByName))) {
+            gameData.setCurrentRoom(exitByName);
+            return "Přesunut do místnosti " + roomName;
+        } else if (!gameData.getCurrentRoom().getEnemy().isDead()) {
             return "Nejprve se musíš dostat přes nepřítele, který ti stojí v cestě!";
-        }
-        else if (gameData.getCurrentRoom().getExitByName(roomName).getEnemy().getType() == Enemy.enemyType.boss) {
+        } else if (gameData.getCurrentRoom().getExitByName(roomName).getEnemy().getType() == Enemy.enemyType.boss) {
             if (!player.getInventory().openInventory().contains(gameData.getCurrentRoom().getExitByName("spizirna").getEnemy().dropItem())) {
                 return "Ke vstupu do místnosti potřebuješ klíč!";
             }
@@ -43,8 +44,7 @@ public class GoCommand implements Command{
                 return "Přesunut do místnosti " + roomName;
                         //gameData.getCurrentRoom().toString();
             }
-        }
-        else {
+        } else {
             gameData.setCurrentRoom(exitByName);
             return "Přesunut do místnosti " + roomName;
                     //gameData.getCurrentRoom().toString();

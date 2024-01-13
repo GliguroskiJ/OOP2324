@@ -13,4 +13,5 @@ public interface GameData {
     void setCurrentRoom(Room currentRoom);
     void init();
     Player getPlayer();
+    boolean exitRoom(Room currentRoom);
 }

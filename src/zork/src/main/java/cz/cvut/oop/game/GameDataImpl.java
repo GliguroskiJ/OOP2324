@@ -15,7 +15,6 @@ public class GameDataImpl implements GameData {
     private boolean finished;
     private List<Room> rooms;
     private Player player;
-
     /**
      *  Room map registration in constructor
      */
@@ -60,6 +59,7 @@ public class GameDataImpl implements GameData {
         player = new Player();
 
         this.currentRoom = corridor;
+        this.currentRoom.setWasVisited(true);
     }
 
     @Override
@@ -73,8 +73,13 @@ public class GameDataImpl implements GameData {
     @Override
     public void setCurrentRoom(Room currentRoom) {
         this.currentRoom = currentRoom;
+        currentRoom.setWasVisited(true);
     }
-
+    @Override
+    public boolean exitRoom(Room room) {
+        if(room.isWasVisited()) return true;
+        else return false;
+    }
     @Override
     public Room getCurrentRoom() {
         return currentRoom;
@@ -101,4 +106,5 @@ public class GameDataImpl implements GameData {
     public Player getPlayer() {
         return player;
     }
+
 }

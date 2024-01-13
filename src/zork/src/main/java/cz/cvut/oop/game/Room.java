@@ -18,4 +18,6 @@ public interface Room {
     ArrayList<Item> getFloor();
     String lookOnFloor();
     boolean isEnemyNull();
+    boolean isWasVisited();
+    void setWasVisited(boolean wasVisited);
 }

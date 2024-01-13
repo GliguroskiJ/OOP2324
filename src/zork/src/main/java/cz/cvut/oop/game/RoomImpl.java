@@ -15,6 +15,7 @@ public class RoomImpl implements Room {
     private Map<String,Room> exits = new HashMap<>();
     private Enemy enemy;
     private ArrayList<Item> floor;
+    private boolean wasVisited;
 
     public RoomImpl(String name, String description, Enemy enemy){
         this.name = name;
@@ -128,5 +129,15 @@ public class RoomImpl implements Room {
             }
             return String.join(", ", itemNames);
         }
+    }
+
+    @Override
+    public boolean isWasVisited() {
+        return wasVisited;
+    }
+
+    @Override
+    public void setWasVisited(boolean wasVisited) {
+        this.wasVisited = wasVisited;
     }
 }
