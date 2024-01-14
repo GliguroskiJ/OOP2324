@@ -1,6 +1,7 @@
 package cz.cvut.oop.model;
 
 import cz.cvut.oop.game.GameData;
+import cz.cvut.oop.game.Room;
 
 public class Enemy {
     private String name;
@@ -51,6 +52,33 @@ public class Enemy {
         if (isDead()) return "Nepřítel je mrtev";
         else if (!isDead()) return name;
         else return "Zde se nenachází žádný nepřítel";
+    }
+
+    public String onlyEnemyDealDamage(GameData gameData, Room exitByName) {
+        if ((!this.isDead()) && (exitByName != null)){
+            Enemy enemy = gameData.getCurrentRoom().getEnemy();
+            Player player = gameData.getPlayer();
+
+            int healthAfterAttack;
+            int enemyDamage = enemy.getDamage();
+            player.setHealth(player.getHealth()-enemyDamage);
+            healthAfterAttack = player.getHealth();
+
+            gameData.setCurrentRoom(exitByName);
+
+            return "Obdržel si " + enemyDamage + " bodů poškození a aktuálně máš " + healthAfterAttack + " životů\n";
+        } else if ((!this.isDead()) && (exitByName == null)) {
+            Enemy enemy = gameData.getCurrentRoom().getEnemy();
+            Player player = gameData.getPlayer();
+
+            int healthAfterAttack;
+            int enemyDamage = enemy.getDamage();
+            player.setHealth(player.getHealth()-enemyDamage);
+            healthAfterAttack = player.getHealth();
+
+            return "Obdržel si " + enemyDamage + " bodů poškození a aktuálně máš " + healthAfterAttack + " životů\n";
+        }
+        else return "";
     }
 
 }

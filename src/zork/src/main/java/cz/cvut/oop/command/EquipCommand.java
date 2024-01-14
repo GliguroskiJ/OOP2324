@@ -18,8 +18,6 @@ public class EquipCommand implements Command{
         if (arguments.length < 2) return "Špatně zadaný příkaz. Pro více info použij příkaz [help]";
 
         String weaponToEquip = arguments[1];
-        Item weapon;
-        Item newWeapon;
         Player player = gameData.getPlayer();
         Enemy enemy = gameData.getCurrentRoom().getEnemy();
         Map<String, Item> inventoryMap = new HashMap<>();
@@ -32,33 +30,16 @@ public class EquipCommand implements Command{
         }
 
         if (inventoryMap.containsKey(weaponToEquip) && (inventoryMap.get(weaponToEquip).getType() == Item.itemType.weapon) && gameData.getCurrentRoom().isEnemyNull()) {
-            weapon = inventoryMap.get(weaponToEquip);
-            player.getInventory().openInventory().remove(inventoryMap.get(weaponToEquip));
-            inventoryMap.remove(weaponToEquip);
-            newWeapon = player.swapWeapons(weapon);
-            return "Do ruky sis dal předmět " + newWeapon.getName() + " se sílou útoku od " + newWeapon.getDamage()[0] + " do " + newWeapon.getDamage()[1] + "\n" +
+            return player.weaponChange(inventoryMap, weaponToEquip) +
                     player.getInventory().listItemsInInventory();
 
         } else if (inventoryMap.containsKey(weaponToEquip) && (inventoryMap.get(weaponToEquip).getType() == Item.itemType.weapon) && enemy.isDead()) {
-            weapon = inventoryMap.get(weaponToEquip);
-            player.getInventory().openInventory().remove(inventoryMap.get(weaponToEquip));
-            inventoryMap.remove(weaponToEquip);
-            newWeapon = player.swapWeapons(weapon);
-            return "Do ruky sis dal předmět " + newWeapon.getName() + " se sílou útoku od " + newWeapon.getDamage()[0] + " do " + newWeapon.getDamage()[1] + "\n" +
+            return  player.weaponChange(inventoryMap, weaponToEquip) +
                     player.getInventory().listItemsInInventory();
 
         } else if ((inventoryMap.containsKey(weaponToEquip)) && (inventoryMap.get(weaponToEquip).getType() == Item.itemType.weapon) && ((!enemy.isDead()) || !gameData.getCurrentRoom().isEnemyNull())) {
-            int healthAfterAttack;
-            int enemyDamage = enemy.getDamage();
-            player.setHealth(player.getHealth()-enemyDamage);
-            healthAfterAttack = player.getHealth();
-
-            weapon = inventoryMap.get(weaponToEquip);
-            player.getInventory().openInventory().remove(inventoryMap.get(weaponToEquip));
-            inventoryMap.remove(weaponToEquip);
-            newWeapon = player.swapWeapons(weapon);
-            return "Do ruky sis dal předmět " + newWeapon.getName() + " se sílou útoku od " + newWeapon.getDamage()[0] + " do " + newWeapon.getDamage()[1] + "\n" +
-                    "Obdržel si " + enemyDamage + " bodů poškození a aktuálně máš " + healthAfterAttack + " životů" + "\n" +
+            return player.weaponChange(inventoryMap, weaponToEquip) +
+                    enemy.onlyEnemyDealDamage(gameData, null) +
                     player.getInventory().listItemsInInventory();
 
         } else if (inventoryMap.containsKey(weaponToEquip) && inventoryMap.get(weaponToEquip).getType() == Item.itemType.key) {

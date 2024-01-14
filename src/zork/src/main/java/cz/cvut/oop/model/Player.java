@@ -1,7 +1,9 @@
 package cz.cvut.oop.model;
 
 import cz.cvut.oop.command.*;
+import cz.cvut.oop.game.GameData;
 
+import java.util.Map;
 import java.util.Random;
 
 public class Player {
@@ -51,5 +53,17 @@ public class Player {
             inventory.addToInventory(curentWeapon);
             return weapon;
         }
+    }
+
+    public String weaponChange (Map<String, Item> inventoryMap, String weaponToEquip) {
+        Item weapon;
+        Item newWeapon;
+
+        weapon = inventoryMap.get(weaponToEquip);
+        this.getInventory().openInventory().remove(inventoryMap.get(weaponToEquip));
+        inventoryMap.remove(weaponToEquip);
+        newWeapon = swapWeapons(weapon);
+
+        return "Do ruky sis dal předmět " + newWeapon.getName() + " se sílou útoku od " + newWeapon.getDamage()[0] + " do " + newWeapon.getDamage()[1] + "\n";
     }
 }
