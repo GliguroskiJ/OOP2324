@@ -4,11 +4,12 @@ import java.util.ArrayList;
 
 public class Inventory {
     private final ArrayList<Item> inventory;
-    private final int inventorySize = 4; //Velikost inventáře lze vždy změnit
+    private final int inventorySize; //Velikost inventáře lze vždy změnit v konstruktoru playera
     private final ArrayList<InventoryListenerImpl> registeredUsers = new ArrayList<>();
 
-    public Inventory() {
+    public Inventory(int size) {
         this.inventory = new ArrayList<>();
+        this.inventorySize = size;
     }
 
     public ArrayList<Item> openInventory() {

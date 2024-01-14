@@ -9,7 +9,7 @@ public class Player {
 
     public Player() {
         this.health = 130;
-        this.inventory = new Inventory();
+        this.inventory = new Inventory(4);
         this.weapon = null;
     }
 
