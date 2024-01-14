@@ -31,7 +31,7 @@ public class DropCommand implements Command{
         }
 
         if (inventoryMap.containsKey(itemToDrop)) {
-            player.getInventory().openInventory().remove(inventoryMap.get(itemToDrop));
+            player.getInventory().removeFromInventory(inventoryMap.get(itemToDrop));
             room.getFloor().add(inventoryMap.get(itemToDrop));
 
             return "Na zem si položil předmět " + itemToDrop;

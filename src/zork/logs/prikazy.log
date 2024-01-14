@@ -4,3 +4,61 @@
 14-01-2024 16:48:27 [main] INFO  cz.cvut.oop.ui.CommandLineUi - look
 14-01-2024 16:48:31 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take klacek
 14-01-2024 16:48:39 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take knihovna
+14-01-2024 17:40:08 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+14-01-2024 17:40:11 [main] INFO  cz.cvut.oop.ui.CommandLineUi - look
+14-01-2024 17:40:16 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take klacek
+14-01-2024 17:40:25 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip klacek
+14-01-2024 17:41:34 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+14-01-2024 17:41:40 [main] INFO  cz.cvut.oop.ui.CommandLineUi - look
+14-01-2024 17:41:45 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take klacek
+14-01-2024 17:41:48 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip klacek
+14-01-2024 17:45:27 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+14-01-2024 17:45:31 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take klacek
+14-01-2024 17:45:33 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip kalcek
+14-01-2024 17:45:37 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip klacek
+14-01-2024 17:45:46 [main] INFO  cz.cvut.oop.ui.CommandLineUi - taek gfw
+14-01-2024 17:45:48 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take ewf
+14-01-2024 17:45:50 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip fwefwe
+14-01-2024 17:45:56 [main] INFO  cz.cvut.oop.ui.CommandLineUi - go knihovna
+14-01-2024 17:46:14 [main] INFO  cz.cvut.oop.ui.CommandLineUi - attack
+14-01-2024 17:46:15 [main] INFO  cz.cvut.oop.ui.CommandLineUi - attack
+14-01-2024 17:46:17 [main] INFO  cz.cvut.oop.ui.CommandLineUi - attack
+14-01-2024 17:46:19 [main] INFO  cz.cvut.oop.ui.CommandLineUi - look
+14-01-2024 17:46:21 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take kniha
+14-01-2024 17:46:28 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip kniha
+14-01-2024 17:52:06 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+14-01-2024 17:52:09 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take klacek
+14-01-2024 17:52:16 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip klacek
+14-01-2024 17:55:05 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+14-01-2024 17:55:08 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take klacek
+14-01-2024 17:56:06 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip klacek
+14-01-2024 17:56:13 [main] INFO  cz.cvut.oop.ui.CommandLineUi - go knihovna
+14-01-2024 17:56:24 [main] INFO  cz.cvut.oop.ui.CommandLineUi - attack
+14-01-2024 17:56:26 [main] INFO  cz.cvut.oop.ui.CommandLineUi - attack
+14-01-2024 17:56:27 [main] INFO  cz.cvut.oop.ui.CommandLineUi - attack
+14-01-2024 17:56:29 [main] INFO  cz.cvut.oop.ui.CommandLineUi - look
+14-01-2024 17:56:31 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take kniha
+14-01-2024 17:56:40 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip kniha
+14-01-2024 17:58:24 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+14-01-2024 17:58:28 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take klacek
+14-01-2024 17:58:33 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip klacek
+14-01-2024 17:58:37 [main] INFO  cz.cvut.oop.ui.CommandLineUi - go knihovna
+14-01-2024 17:58:45 [main] INFO  cz.cvut.oop.ui.CommandLineUi - attack
+14-01-2024 17:58:47 [main] INFO  cz.cvut.oop.ui.CommandLineUi - attack
+14-01-2024 17:58:48 [main] INFO  cz.cvut.oop.ui.CommandLineUi - attack
+14-01-2024 17:58:50 [main] INFO  cz.cvut.oop.ui.CommandLineUi - look
+14-01-2024 17:58:55 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take kniha
+14-01-2024 17:59:01 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip kniha
+14-01-2024 17:59:21 [main] INFO  cz.cvut.oop.ui.CommandLineUi - look
+14-01-2024 17:59:30 [main] INFO  cz.cvut.oop.ui.CommandLineUi - go loznice
+14-01-2024 18:00:56 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+14-01-2024 18:00:59 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take klacek
+14-01-2024 18:01:03 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip klacek
+14-01-2024 18:01:06 [main] INFO  cz.cvut.oop.ui.CommandLineUi - go knihovna
+14-01-2024 18:01:08 [main] INFO  cz.cvut.oop.ui.CommandLineUi - attack
+14-01-2024 18:01:08 [main] INFO  cz.cvut.oop.ui.CommandLineUi - attack
+14-01-2024 18:01:09 [main] INFO  cz.cvut.oop.ui.CommandLineUi - attack
+14-01-2024 18:01:12 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take kniha
+14-01-2024 18:01:17 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip kniha
+14-01-2024 18:02:05 [main] INFO  cz.cvut.oop.ui.CommandLineUi - look
+14-01-2024 18:02:07 [main] INFO  cz.cvut.oop.ui.CommandLineUi - go loznice

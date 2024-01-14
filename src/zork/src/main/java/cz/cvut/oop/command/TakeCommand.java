@@ -28,8 +28,7 @@ public class TakeCommand implements Command{
             player.getInventory().addToInventory(itemMap.get(selectedItem));
             gameData.getCurrentRoom().getFloor().remove(itemMap.get(selectedItem));
             itemMap.remove(selectedItem);
-            return "Předmět " + selectedItem + " byl přidán do inventáře\n"+
-                    player.getInventory().listItemsInInventory();
+            return "Předmět " + selectedItem + " byl přidán do inventáře";
         }
         else if (!player.getInventory().isSpace()) return "Máš plný batoh. Nejprve něco odlož";
         else return "Takový předmět na zemi není";

@@ -57,6 +57,7 @@ public class GameDataImpl implements GameData {
         rooms.add(workRoom);
 
         player = new Player();
+        player.getInventory().addRegisteredUser(new InventoryListenerImpl());
 
         this.currentRoom = corridor;
         this.currentRoom.setWasVisited(true);

@@ -45,7 +45,7 @@ public class Player {
         } else {
             Item curentWeapon = weapon;
             this.weapon = item;
-            inventory.addToInventory(curentWeapon);
+            this.getInventory().openInventory().add(curentWeapon);
             return weapon;
         }
     }
@@ -55,10 +55,10 @@ public class Player {
         Item newWeapon;
 
         weapon = inventoryMap.get(weaponToEquip);
-        this.getInventory().openInventory().remove(inventoryMap.get(weaponToEquip));
-        inventoryMap.remove(weaponToEquip);
         newWeapon = swapWeapons(weapon);
+        this.getInventory().removeFromInventory(inventoryMap.get(weaponToEquip));
+        inventoryMap.remove(weaponToEquip);
 
-        return "Do ruky sis dal předmět " + newWeapon.getName() + " se sílou útoku od " + newWeapon.getDamage()[0] + " do " + newWeapon.getDamage()[1] + "\n";
+        return "Do ruky sis dal předmět " + newWeapon.getName() + " se sílou útoku od " + newWeapon.getDamage()[0] + " do " + newWeapon.getDamage()[1];
     }
 }

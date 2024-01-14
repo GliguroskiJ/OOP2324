@@ -30,17 +30,14 @@ public class EquipCommand implements Command{
         }
 
         if (inventoryMap.containsKey(weaponToEquip) && (inventoryMap.get(weaponToEquip).getType() == Item.itemType.weapon) && gameData.getCurrentRoom().isEnemyNull()) {
-            return player.weaponChange(inventoryMap, weaponToEquip) +
-                    player.getInventory().listItemsInInventory();
+            return player.weaponChange(inventoryMap, weaponToEquip);
 
         } else if (inventoryMap.containsKey(weaponToEquip) && (inventoryMap.get(weaponToEquip).getType() == Item.itemType.weapon) && enemy.isDead()) {
-            return  player.weaponChange(inventoryMap, weaponToEquip) +
-                    player.getInventory().listItemsInInventory();
+            return  player.weaponChange(inventoryMap, weaponToEquip);
 
         } else if ((inventoryMap.containsKey(weaponToEquip)) && (inventoryMap.get(weaponToEquip).getType() == Item.itemType.weapon) && ((!enemy.isDead()) || !gameData.getCurrentRoom().isEnemyNull())) {
             return player.weaponChange(inventoryMap, weaponToEquip) +
-                    enemy.onlyEnemyDealDamage(gameData, null) +
-                    player.getInventory().listItemsInInventory();
+                    enemy.onlyEnemyDealDamage(gameData, null);
 
         } else if (inventoryMap.containsKey(weaponToEquip) && inventoryMap.get(weaponToEquip).getType() == Item.itemType.key) {
             return "Tento předmět si nemůžeš nasadit";
