@@ -34,9 +34,12 @@ public class CommandLineUi {
             System.out.println(this.game.welcomeMessage());
             while(!this.game.isFinished()){
                 System.out.print("> ");
-                System.out.println(this.game.processTextCommand(scanner.nextLine()));
+                String userInput = scanner.nextLine();
+                log.info(userInput);
+                System.out.println(this.game.processTextCommand(userInput));
             }
             System.out.println(this.game.endMessage());
+            log.info("application ended");
         }
     }
 
