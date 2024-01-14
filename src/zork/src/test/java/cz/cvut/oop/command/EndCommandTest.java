@@ -8,11 +8,11 @@ import org.mockito.Mockito;
 public class EndCommandTest {
     @Test
     public void endCommandTest(){
-        EndCommand endCommand = new EndCommand();
+        EndCommand end = new EndCommand();
 
         GameDataImpl gameData = Mockito.spy(new GameDataImpl());
 
-        String result = endCommand.execute(null, gameData);
+        String result = end.execute(null, gameData);
         Assert.assertTrue(result.contains("Hra byla ukončena"));
         Assert.assertTrue(gameData.isFinished());
 
