@@ -1,12 +1,12 @@
 <Configuration>
     <Appenders>
-        <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%-5level %logger{36} - %msg%n"/>
-        </Console>
+        <File name="GameLog"  filename="logs/prikazy.log">
+            <PatternLayout pattern="%d{dd-MM-yyyy HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
     </Appenders>
     <Loggers>
         <Root level="INFO">
-            <AppenderRef ref="Console"/>
+            <AppenderRef ref="GameLog"/>
         </Root>
     </Loggers>
 </Configuration>
