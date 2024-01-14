@@ -89,3 +89,15 @@
 14-01-2024 19:12:13 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
 14-01-2024 19:12:16 [main] INFO  cz.cvut.oop.ui.CommandLineUi - end
 14-01-2024 19:12:16 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application ended
+14-01-2024 22:10:19 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+14-01-2024 22:10:22 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take klacek
+14-01-2024 22:16:46 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+14-01-2024 22:16:53 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take klacek
+14-01-2024 22:20:35 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+14-01-2024 22:20:41 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take klacek
+14-01-2024 22:20:54 [main] INFO  cz.cvut.oop.ui.CommandLineUi - go knihovna
+14-01-2024 22:23:32 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+14-01-2024 22:23:38 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take klacek
+14-01-2024 22:33:32 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+14-01-2024 22:33:35 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take klacek
+14-01-2024 22:33:37 [main] INFO  cz.cvut.oop.ui.CommandLineUi - drop klacek
