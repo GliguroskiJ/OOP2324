@@ -21,6 +21,10 @@ public class Player {
         return weapon;
     }
 
+    public void setWeapon(Item weapon) {
+        this.weapon = weapon;
+    }
+
     public int getHealth() {
         return health;
     }
