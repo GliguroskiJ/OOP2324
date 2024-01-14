@@ -46,6 +46,5 @@ public class HelpCommandTest {
                 "[" + commands.get("equip").getName() + " 'item']" + " - Nasadíš  si 'item' z inventáře\n" +
                 "[" + commands.get("drop").getName() + " 'item']" + " - Položíš 'item' na zem\n" +
                 "[" + commands.get("end").getName() + "]" + " - Ukončíš celou hru"));
-        //Mockito.verify(gameData, Mockito.times(1)).init();
     }
 }

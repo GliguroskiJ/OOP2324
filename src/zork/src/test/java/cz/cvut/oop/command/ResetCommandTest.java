@@ -14,7 +14,7 @@ public class ResetCommandTest {
         GameDataImpl gameData = Mockito.spy(new GameDataImpl());
 
         String result = reset.execute(null, gameData);
-        Assert.assertTrue(result.contains("hra uspesne resetovana."));
+        Assert.assertTrue(result.contains("Hra byla restartována pomocí příkazu 'reset'"));
         Mockito.verify(gameData, Mockito.times(1)).init();
     }
 }

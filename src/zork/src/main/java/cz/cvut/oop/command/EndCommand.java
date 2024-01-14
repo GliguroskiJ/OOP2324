@@ -11,6 +11,6 @@ public class EndCommand implements Command{
     @Override
     public String execute(String[] arguments, GameData gameData) {
         gameData.setFinished(true);
-        return "Hra byla ukončena";
+        return "Hra byla ukončena pomocí příkazu 'end'";
     }
 }
