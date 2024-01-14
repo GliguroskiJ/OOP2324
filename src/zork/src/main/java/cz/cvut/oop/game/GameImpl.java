@@ -51,10 +51,12 @@ public class GameImpl implements Game {
      */
     @Override
     public String welcomeMessage() {
-        //TODO doplnit pořádnou uvítací hlášku
-        return "Startovní hláška hry, pokud nevíte co a jak, \n" +
-                "použijte příkaz 'help'";
-
+        return "Pokud si nebudeš kdykoliv vědět rady co za příkaz máš použít ---> použij prosím příkaz 'help'.\n" +
+                "<-------------------------------------------------------------------------------------------->\n" +
+                "Ocitl si se v relativně tmavé chodbě, kde ze dveří naproti prosvíta světlo až na tebe.\n" +
+                "Jediné co si pamatuješ je, že si chtěl pár drobných na jídlo a vešel si do domu\n" +
+                "s nápisem na dveřích - 'The strange rich family'.\n" +
+                "Začni nejlépe příkazem 'look'";
     }
 
     /**
@@ -63,8 +65,7 @@ public class GameImpl implements Game {
      */
     @Override
     public String endMessage() {
-        //TODO doplnit pořádnou koncovou hlášku
-        return "Koncová hláška";
+        return "Hra skončila, pro nový pokus spusť prosím hru znovu";
     }
 
     /**
@@ -75,7 +76,6 @@ public class GameImpl implements Game {
      */
     @Override
     public String processTextCommand(String line) {
-        //TODO zpracovat z řádku příkaz a argumenty a naplnit kde je to potřeba
         String result;
         String[] args = line.split(" ");
         Command command = commands.getOrDefault(args[0], null);
