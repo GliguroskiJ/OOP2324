@@ -85,3 +85,7 @@
 14-01-2024 18:06:07 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take telefon
 14-01-2024 18:06:13 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip telefon
 14-01-2024 18:06:18 [main] INFO  cz.cvut.oop.ui.CommandLineUi - go kuchyn
+14-01-2024 19:08:30 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+14-01-2024 19:12:13 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+14-01-2024 19:12:16 [main] INFO  cz.cvut.oop.ui.CommandLineUi - end
+14-01-2024 19:12:16 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application ended

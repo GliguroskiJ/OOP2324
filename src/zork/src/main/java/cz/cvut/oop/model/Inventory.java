@@ -39,8 +39,8 @@ public class Inventory {
     }
 
     public void notifyRegisteredUsers() {
-        for (int i = 0; i < registeredUsers.size(); i++){
-            registeredUsers.get(i).update(this);
+        for (InventoryListenerImpl registeredUser : registeredUsers) {
+            registeredUser.update(this);
         }
     }
 
