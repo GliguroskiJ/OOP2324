@@ -4,11 +4,11 @@ import cz.cvut.oop.game.GameData;
 import cz.cvut.oop.game.Room;
 
 public class Enemy {
-    private String name;
-    private int[] damage;
+    private final String name;
+    private final int[] damage;
     private int health;
-    private enemyType type;
-    private Item itemDrop;
+    private final enemyType type;
+    private final Item itemDrop;
     public enum enemyType {normal, boss}
 
     public Enemy(String name, int[] damage, int health, enemyType type, Item itemDrop) {
@@ -46,12 +46,6 @@ public class Enemy {
 
     public Item dropItem() {
         return itemDrop;
-    }
-
-    public String lookForEnemy() {
-        if (isDead()) return "Nepřítel je mrtev";
-        else if (!isDead()) return name;
-        else return "Zde se nenachází žádný nepřítel";
     }
 
     public String onlyEnemyDealDamage(GameData gameData, Room exitByName) {

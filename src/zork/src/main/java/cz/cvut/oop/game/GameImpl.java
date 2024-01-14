@@ -11,8 +11,8 @@ import java.util.Map;
  */
 public class GameImpl implements Game {
 
-    private Map<String, Command> commands = new HashMap<>();
-    private GameData gameData;
+    private final Map<String, Command> commands = new HashMap<>();
+    private final GameData gameData;
 
     public GameImpl(){
         this.registerCommands();

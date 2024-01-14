@@ -3,18 +3,17 @@ package cz.cvut.oop.game;
 import cz.cvut.oop.model.*;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  *  Class represents Room, e.g. space in our game. It contains exits and can form a map of Rooms
  */
 public class RoomImpl implements Room {
 
-    private String name;
-    private String description;
-    private Map<String,Room> exits = new HashMap<>();
-    private Enemy enemy;
-    private ArrayList<Item> floor;
+    private final String name;
+    private final String description;
+    private final Map<String,Room> exits = new HashMap<>();
+    private final Enemy enemy;
+    private final ArrayList<Item> floor;
     private boolean wasVisited;
 
     public RoomImpl(String name, String description, Enemy enemy){
@@ -68,14 +67,6 @@ public class RoomImpl implements Room {
     @Override
     public String getDescription() {
         return description;
-    }
-
-    /**
-     *  Return unmodifiable view of our map
-     */
-    @Override
-    public Collection<Room> getExits() {
-        return Collections.unmodifiableCollection(exits.values());
     }
 
     /**

@@ -5,8 +5,6 @@ import cz.cvut.oop.game.Room;
 import cz.cvut.oop.model.Enemy;
 import cz.cvut.oop.model.Player;
 
-import java.util.Objects;
-
 public class GoCommand implements Command{
     @Override
     public String getName() {

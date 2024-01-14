@@ -2,9 +2,9 @@ package cz.cvut.oop.model;
 
 public class Item {
     private int[] damage = new int[2];
-    private String name;
-    private itemType type;
-    public enum itemType {weapon, key};
+    private final String name;
+    private final itemType type;
+    public enum itemType {weapon, key}
 
     public Item(int[] damage, String name) {
         this.damage = damage;

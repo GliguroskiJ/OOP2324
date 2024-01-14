@@ -3,8 +3,8 @@ package cz.cvut.oop.model;
 import java.util.ArrayList;
 
 public class Inventory {
-    private ArrayList<Item> inventory;
-    private int inventorySize = 4; //Velikost inventáře lze vždy změnit
+    private final ArrayList<Item> inventory;
+    private final int inventorySize = 4; //Velikost inventáře lze vždy změnit
 
     public Inventory() {
         this.inventory = new ArrayList<>();
@@ -23,19 +23,12 @@ public class Inventory {
         else return false;
     }
 
-    public void removeFromInventory (Item item) {
-        if (inventory.contains(item)) {
-            inventory.remove(item);
-        }
-        else System.out.println("Tento item nemáš v inventáři");
-    }
-
     public String listItemsInInventory() {
         ArrayList<String> itemNames = new ArrayList<>();
         if (openInventory().isEmpty()) return "V inventáři aktuálně nemáš žadný předmět";
         else {
-            for (int i = 0; i < inventory.size(); i++){
-                itemNames.add(inventory.get(i).getName());
+            for (Item item : inventory) {
+                itemNames.add(item.getName());
             }
             return "V inventáři máš aktuálně " + String.join(", ", itemNames);
         }

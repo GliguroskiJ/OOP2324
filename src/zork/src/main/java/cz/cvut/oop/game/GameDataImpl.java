@@ -62,11 +62,6 @@ public class GameDataImpl implements GameData {
         this.currentRoom.setWasVisited(true);
     }
 
-    @Override
-    public List<Room> getRooms() {
-        return rooms;
-    }
-
     /**
      *  Sets room, where the user currently resides
      */

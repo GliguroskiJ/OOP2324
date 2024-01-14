@@ -1,14 +1,10 @@
 package cz.cvut.oop.model;
 
-import cz.cvut.oop.command.*;
-import cz.cvut.oop.game.GameData;
-
 import java.util.Map;
-import java.util.Random;
 
 public class Player {
     private int health;
-    private Inventory inventory;
+    private final Inventory inventory;
     private Item weapon;
 
     public Player() {
@@ -46,8 +42,7 @@ public class Player {
         if (weapon == null ) {
             this.weapon = item;
             return weapon;
-        }
-        else {
+        } else {
             Item curentWeapon = weapon;
             this.weapon = item;
             inventory.addToInventory(curentWeapon);
