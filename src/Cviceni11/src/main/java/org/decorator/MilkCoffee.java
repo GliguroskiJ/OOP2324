@@ -1,18 +1,17 @@
 package org.decorator;
 
-public class MilkCoffee extends CoffeeDecorator
-{
-    public MilkCoffee(Coffee coffee)
-    {
+public class MilkCoffee extends CoffeeDecorator{
+    public MilkCoffee(Coffee coffee) {
         super(coffee);
     }
 
     @Override
-    public String prepareCoffee()
-    {
+    public String prepareCoffee() {
         return super.prepareCoffee()+", s mlekem";
     }
 
     @Override
-    public double getCost() {return super.getCost()+5;}
+    public double getCost() {
+        return super.getCost()+5;
+    }
 }

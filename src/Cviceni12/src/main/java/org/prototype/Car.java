@@ -1,17 +1,23 @@
 package org.prototype;
 
-public class Car {
-    private String nazev;
+public class Car implements Cloneable{
 
-    public Car(String nazev) {
-        this.nazev = nazev;
+    private String name;
+
+    public Car(String name) {
+        this.name = name;
     }
 
-    public String getNazev() {
-        return nazev;
+    public String getName() {
+        return name;
     }
 
-    public void setNazev(String nazev) {
-        this.nazev = nazev;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

@@ -1,6 +1,4 @@
-package org.Strategy;
-import org.Strategy.*;
-import org.strategy.Sorting;
+package org.strategy;
 
 import java.util.List;
 
@@ -15,7 +13,7 @@ public class Sorter {
         this.strategy = strategy;
     }
 
-    public List<Integer> sortList(List<Integer>) {
-        return null;
+    public List<Integer> sortList(List<Integer> list) {
+        return strategy.sort(list);
     }
 }

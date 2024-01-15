@@ -1,0 +1,3 @@
+2023-12-04 [main] INFO  org.main.Main Info log!
+2023-12-04 [main] ERROR org.main.Main Error log
+2023-12-04 [main] WARN  org.main.Main Warn log
