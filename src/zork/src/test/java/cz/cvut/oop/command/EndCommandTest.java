@@ -13,6 +13,7 @@ public class EndCommandTest {
         GameDataImpl gameData = Mockito.spy(new GameDataImpl());
 
         String result = end.execute(null, gameData);
+
         Assert.assertTrue(result.contains("Hra byla ukončena pomocí příkazu 'end'"));
         Assert.assertTrue(gameData.isFinished());
     }

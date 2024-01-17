@@ -36,6 +36,7 @@ public class HelpCommandTest {
         GameDataImpl gameData = Mockito.spy(new GameDataImpl());
 
         String result = help.execute(null, gameData);
+
         Assert.assertTrue(result.contains("Všechny možné použitelné příkazy: \n" +
                 "[" + commands.get("help").getName() + "]" + " - Vypíše všechny dostupné příkazy\n" +
                 "[" + commands.get("reset").getName() + "]" + " - Restartuje celou hru\n" +

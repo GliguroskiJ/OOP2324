@@ -22,6 +22,7 @@ public class LookCommandTest {
 
         String result = look.execute(null, gameData);
         System.out.println(result + "\n");
+
         Assert.assertTrue(result.contains("Rozhlédl si se po místnosti " + "testRoom1" + "\n" +
                 "<------------------------------------------>\n" +
                 "[attack] - " + "Zde se nenachází žádný nepřítel" + "\n" +
@@ -41,6 +42,7 @@ public class LookCommandTest {
 
         String result = look.execute(null, gameData);
         System.out.println(result + "\n");
+
         Assert.assertTrue(result.contains("Rozhlédl si se po místnosti " + "testRoom1" + "\n" +
                 "<------------------------------------------>\n" +
                 "[attack] - " + "testEnemy1" + "\n" +
@@ -61,6 +63,7 @@ public class LookCommandTest {
 
         String result = look.execute(null, gameData);
         System.out.println(result + "\n");
+
         Assert.assertTrue(result.contains("Rozhlédl si se po místnosti " + "testRoom1" + "\n" +
                 "<------------------------------------------>\n" +
                 "[attack] - " + "Nepřítel je mrtev" + "\n" +
@@ -81,6 +84,7 @@ public class LookCommandTest {
 
         String result = look.execute(null, gameData);
         System.out.println(result + "\n");
+
         Assert.assertTrue(result.contains("Rozhlédl si se po místnosti " + "testRoom1" + "\n" +
                 "<------------------------------------------>\n" +
                 "[attack] - " + "Zde se nenachází žádný nepřítel" + "\n" +
@@ -101,6 +105,7 @@ public class LookCommandTest {
 
         String result = look.execute(null, gameData);
         System.out.println(result + "\n");
+
         Assert.assertTrue(result.contains("Rozhlédl si se po místnosti " + "testRoom1" + "\n" +
                 "<------------------------------------------>\n" +
                 "[attack] - " + "testEnemy1" + "\n" +
@@ -122,6 +127,7 @@ public class LookCommandTest {
 
         String result = look.execute(null, gameData);
         System.out.println(result + "\n");
+
         Assert.assertTrue(result.contains("Rozhlédl si se po místnosti " + "testRoom1" + "\n" +
                 "<------------------------------------------>\n" +
                 "[attack] - " + "Nepřítel je mrtev" + "\n" +

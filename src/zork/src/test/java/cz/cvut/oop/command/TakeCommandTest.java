@@ -24,6 +24,7 @@ public class TakeCommandTest {
         String[] userInput = {"take", "testItem1"};
         String result = take.execute(userInput, gameData);
         System.out.println(result + "\n");
+
         Assert.assertTrue(gameData.getPlayer().getInventory().openInventory().contains(testItem1));
     }
     @Test
@@ -41,6 +42,7 @@ public class TakeCommandTest {
         String[] userInput = {"take", "test"};
         String result = take.execute(userInput, gameData);
         System.out.println(result + "\n");
+
         Assert.assertTrue(result.contains("Takový předmět na zemi není"));
     }
     @Test
@@ -62,6 +64,7 @@ public class TakeCommandTest {
         String[] userInput = {"take", "testItem1"};
         String result = take.execute(userInput, gameData);
         System.out.println(result + "\n");
+
         Assert.assertTrue(result.contains("Máš plný batoh. Nejprve něco odlož"));
     }
 }
