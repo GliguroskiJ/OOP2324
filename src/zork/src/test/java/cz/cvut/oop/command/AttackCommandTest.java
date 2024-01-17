@@ -186,4 +186,28 @@ public class AttackCommandTest {
         Assert.assertTrue(gameData.getCurrentRoom().getEnemy().isDead());
         Assert.assertTrue(result.contains("Nepřítel je již po smrti!"));
     }
+    @Test
+    public void attackCommand_EnemyDead_EnemyTypeBoss_WeaponOn() {
+        AttackCommand attack = new AttackCommand();
+        GameDataImpl gameData = new GameDataImpl();
+        Room testRoom1 = new RoomImpl("testRoom1", "testPopisek1", new Enemy("testEnemy1", new int[]{1, 1}, 1, Enemy.enemyType.boss, new Item("testItem1")));
+        Room testRoom2 = new RoomImpl("testRoom2", "testPopisek2");
+        gameData.getPlayer().setWeapon(new Item(new int[]{1, 1}, "testWeapon1"));
+
+        testRoom1.registerExit(testRoom2);
+        testRoom1.setWasVisited(true);
+        gameData.setCurrentRoom(testRoom1);
+
+        int playerHP = gameData.getPlayer().getHealth();
+        int enemyHP = gameData.getCurrentRoom().getEnemy().getHealth();
+
+        String result = attack.execute(null, gameData);
+        System.out.println(result + "\n");
+
+        Assert.assertNotNull(gameData.getPlayer().getWeapon());
+        Assert.assertTrue(playerHP > gameData.getPlayer().getHealth());
+        Assert.assertTrue(enemyHP > gameData.getCurrentRoom().getEnemy().getHealth());
+        Assert.assertTrue(gameData.getCurrentRoom().getEnemy().isDead());
+        Assert.assertTrue(result.contains("Zabil si bosse a vyhrál si!"));
+    }
 }
