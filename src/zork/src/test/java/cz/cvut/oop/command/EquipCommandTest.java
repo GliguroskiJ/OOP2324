@@ -23,7 +23,7 @@ public class EquipCommandTest {
 
         String[] userInput = {"equip", "testItemToEquip"};
         String result = equip.execute(userInput, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(gameData.getPlayer().getWeapon().getName().contains(testItemToEquip.getName()));
         Assert.assertTrue(result.contains("Do ruky sis dal předmět testItemToEquip se sílou útoku od 0 do 1"));
@@ -45,7 +45,7 @@ public class EquipCommandTest {
 
         String[] userInput = {"equip", "testItemToEquip"};
         String result = equip.execute(userInput, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         //Je vybraná zbraň nasazená?
         Assert.assertTrue(gameData.getPlayer().getWeapon().getName().contains(testItemToEquip.getName()));
@@ -67,7 +67,7 @@ public class EquipCommandTest {
 
         String[] userInput = {"equip", "test"};
         String result = equip.execute(userInput, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Takový předmět v inventáři nemáš"));
     }
@@ -84,7 +84,7 @@ public class EquipCommandTest {
 
         String[] userInput = {"equip", "test"};
         String result = equip.execute(userInput, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Máš prázdný inventář"));
     }
@@ -103,7 +103,7 @@ public class EquipCommandTest {
 
         String[] userInput = {"equip", "testItem1"};
         String result = equip.execute(userInput, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Tento předmět si nemůžeš nasadit"));
     }

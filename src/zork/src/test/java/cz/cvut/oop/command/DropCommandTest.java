@@ -23,7 +23,7 @@ public class DropCommandTest {
 
         String[] userInput = {"drop", "testItem1"};
         String result = drop.execute(userInput, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         //Item byl dropnut na zem a je na zemi místnosti
         Assert.assertTrue(gameData.getCurrentRoom().getFloor().contains(testItem1));
@@ -45,7 +45,7 @@ public class DropCommandTest {
 
         String[] userInput = {"drop", "test"};
         String result = drop.execute(userInput, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Takový předmět v inventáři nemáš"));
     }
@@ -62,7 +62,7 @@ public class DropCommandTest {
 
         String[] userInput = {"drop", "testItem1"};
         String result = drop.execute(userInput, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Máš prázdný inventář"));
     }

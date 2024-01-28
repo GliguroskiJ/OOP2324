@@ -21,7 +21,7 @@ public class LookCommandTest {
         gameData.setCurrentRoom(testRoom1);
 
         String result = look.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Rozhlédl si se po místnosti " + "testRoom1" + "\n" +
                 "V inventáři aktuálně nemáš žadný předmět\n" +
@@ -42,7 +42,7 @@ public class LookCommandTest {
         gameData.setCurrentRoom(testRoom1);
 
         String result = look.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Rozhlédl si se po místnosti " + "testRoom1" + "\n" +
                 "V inventáři aktuálně nemáš žadný předmět\n" +
@@ -64,7 +64,7 @@ public class LookCommandTest {
         gameData.setCurrentRoom(testRoom1);
 
         String result = look.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Rozhlédl si se po místnosti " + "testRoom1" + "\n" +
                 "V inventáři aktuálně nemáš žadný předmět\n" +
@@ -86,7 +86,7 @@ public class LookCommandTest {
         gameData.setCurrentRoom(testRoom1);
 
         String result = look.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Rozhlédl si se po místnosti " + "testRoom1" + "\n" +
                 "V inventáři aktuálně nemáš žadný předmět\n" +
@@ -108,7 +108,7 @@ public class LookCommandTest {
         gameData.setCurrentRoom(testRoom1);
 
         String result = look.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Rozhlédl si se po místnosti " + "testRoom1" + "\n" +
                 "V inventáři aktuálně nemáš žadný předmět\n" +
@@ -130,7 +130,7 @@ public class LookCommandTest {
         gameData.setCurrentRoom(testRoom1);
 
         String result = look.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Rozhlédl si se po místnosti " + "testRoom1" + "\n" +
                 "V inventáři aktuálně nemáš žadný předmět\n" +
@@ -152,7 +152,7 @@ public class LookCommandTest {
         gameData.setCurrentRoom(testRoom1);
 
         String result = look.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Rozhlédl si se po místnosti " + "testRoom1" + "\n" +
                 "V inventáři máš aktuálně testItem1\n" +

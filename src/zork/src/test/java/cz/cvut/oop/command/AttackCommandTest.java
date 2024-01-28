@@ -22,7 +22,7 @@ public class AttackCommandTest {
         gameData.setCurrentRoom(testRoom1);
 
         String result = attack.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Nejprve si nasaď zbraň!"));
         Assert.assertNull(gameData.getPlayer().getWeapon());
@@ -43,7 +43,7 @@ public class AttackCommandTest {
         int enemyHP = gameData.getCurrentRoom().getEnemy().getHealth();
 
         String result = attack.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertNotNull(gameData.getPlayer().getWeapon());
         Assert.assertTrue(playerHP > gameData.getPlayer().getHealth());
@@ -67,7 +67,7 @@ public class AttackCommandTest {
         int enemyHP = gameData.getCurrentRoom().getEnemy().getHealth();
 
         String result = attack.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertNotNull(gameData.getPlayer().getWeapon());
         Assert.assertTrue(playerHP > gameData.getPlayer().getHealth());
@@ -92,7 +92,7 @@ public class AttackCommandTest {
         int enemyHP = gameData.getCurrentRoom().getEnemy().getHealth();
 
         String result = attack.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertNotNull(gameData.getPlayer().getWeapon());
         Assert.assertTrue(playerHP > gameData.getPlayer().getHealth());
@@ -115,7 +115,7 @@ public class AttackCommandTest {
         int enemyHP = gameData.getCurrentRoom().getEnemy().getHealth();
 
         String result = attack.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertNotNull(gameData.getPlayer().getWeapon());
         Assert.assertTrue(playerHP > gameData.getPlayer().getHealth());
@@ -138,7 +138,7 @@ public class AttackCommandTest {
         int playerHP = gameData.getPlayer().getHealth();
 
         String result = attack.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertNotNull(gameData.getPlayer().getWeapon());
         Assert.assertEquals(playerHP, gameData.getPlayer().getHealth());
@@ -158,7 +158,7 @@ public class AttackCommandTest {
         int playerHP = gameData.getPlayer().getHealth();
 
         String result = attack.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertNull(gameData.getPlayer().getWeapon());
         Assert.assertEquals(playerHP, gameData.getPlayer().getHealth());
@@ -179,7 +179,7 @@ public class AttackCommandTest {
         int playerHP = gameData.getPlayer().getHealth();
 
         String result = attack.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertNotNull(gameData.getPlayer().getWeapon());
         Assert.assertEquals(playerHP, gameData.getPlayer().getHealth());
@@ -202,7 +202,7 @@ public class AttackCommandTest {
         int enemyHP = gameData.getCurrentRoom().getEnemy().getHealth();
 
         String result = attack.execute(null, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertNotNull(gameData.getPlayer().getWeapon());
         Assert.assertTrue(playerHP > gameData.getPlayer().getHealth());

@@ -22,7 +22,7 @@ public class GoCommandTest {
 
         String[] userInput = {"go", "testItem1"};
         String result = go.execute(userInput, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Takový exit neexistuje"));
     }
@@ -39,7 +39,7 @@ public class GoCommandTest {
 
         String[] userInput = {"go"};
         String result = go.execute(userInput, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Špatně zadaný příkaz. Pro více info použij příkaz [help]"));
     }
@@ -56,12 +56,17 @@ public class GoCommandTest {
 
         String[] userInput = {"go", "testRoom2"};
         String result = go.execute(userInput, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Přesunul si se do místnosti testRoom2\n" +
                 "Komentář k místnosti: testPopisek1\n" +
                 "V ruce nemáš žádný předmět\n" +
-                "V inventáři aktuálně nemáš žadný předmět"));
+                "Rozhlédl si se po místnosti testRoom1\n" +
+                "V inventáři aktuálně nemáš žadný předmět\n" +
+                "<------------------------------------------>\n" +
+                "[attack] - Nepřítel je mrtev\n" +
+                "[go 'room'] - testRoom2\n" +
+                "[take 'item'] - Na zemi nejsou žádné předměty"));
     }
     @Test
     public void goRoom_EnemyIsAlive(){
@@ -76,7 +81,7 @@ public class GoCommandTest {
 
         String[] userInput = {"go", "testRoom2"};
         String result = go.execute(userInput, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Nejprve se musíš dostat přes nepřítele, který ti stojí v cestě!"));
     }
@@ -93,7 +98,7 @@ public class GoCommandTest {
 
         String[] userInput = {"go", "spizirna"};
         String result = go.execute(userInput, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Ke vstupu do místnosti potřebuješ klíč!"));
     }
@@ -112,11 +117,16 @@ public class GoCommandTest {
 
         String[] userInput = {"go", "spizirna"};
         String result = go.execute(userInput, gameData);
-        System.out.println(result + "\n");
+        //System.out.println(result + "\n");
 
         Assert.assertTrue(result.contains("Přesunul si se do místnosti spizirna\n" +
                 "Komentář k místnosti: spizirna\n" +
                 "V ruce nemáš žádný předmět\n" +
-                "V inventáři máš aktuálně keyTest1"));
+                "Rozhlédl si se po místnosti spizirna\n" +
+                "V inventáři máš aktuálně keyTest1\n" +
+                "<------------------------------------------>\n" +
+                "[attack] - testEnemy1\n" +
+                "[go 'room'] - \n" +
+                "[take 'item'] - Na zemi nejsou žádné předměty"));
     }
 }
