@@ -4,45 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62227c06-320a-4981-88f7-faa07776ef48" name="Changes" comment="com">
-      <change beforePath="$PROJECT_DIR$/../DU2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/.idea/zork.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/command/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/command/GoCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/command/HelpCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/command/ResetCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/game/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/game/GameData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/game/GameDataImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/game/GameImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/game/Room.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/game/RoomImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/main/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/src/main/java/cz/cvut/oop/ui/CommandLineUi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/src/main/resources/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/src/main/test/java/cz/cvut/oop/command/ResetCommandTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/command/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/command/GoCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/command/HelpCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/command/ResetCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/game/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/game/GameData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/game/GameDataImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/game/GameImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/game/Room.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/game/RoomImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/main/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/target/classes/cz/cvut/oop/ui/CommandLineUi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/target/classes/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zork/zadani.MD" beforeDir="false" />
-    </list>
+    <list default="true" id="62227c06-320a-4981-88f7-faa07776ef48" name="Changes" comment="added zadani" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,20 +21,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "state": "OPEN",
-      "assignee": "GliguroskiJ",
-      "author": "GliguroskiJ"
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;GliguroskiJ&quot;,
+      &quot;author&quot;: &quot;GliguroskiJ&quot;
     }
   ],
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "GliguroskiJ",
-    "author": "GliguroskiJ"
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;GliguroskiJ&quot;,
+    &quot;author&quot;: &quot;GliguroskiJ&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -92,32 +54,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/jovangliguroski/Documents/School/FBMI ČVUT/Ing./1. Semester/Objektově orientované programování/Cviceni/src/testOOP",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jovangliguroski/Documents/School/FBMI ČVUT/Ing./1. Semester/Objektově orientované programování/Cviceni/src/testOOP&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-abbd5a8d" />
-      </set>
-    </attachedChunks>
-  </component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -128,6 +83,7 @@
       <updated>1704726363913</updated>
       <workItem from="1704726365809" duration="5781000" />
       <workItem from="1705006782111" duration="1600000" />
+      <workItem from="1705534676252" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -161,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705006814011</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added zadani">
+      <option name="closed" value="true" />
+      <created>1705534688668</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705534688668</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +147,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="." />
     <MESSAGE value="com" />
-    <option name="LAST_COMMIT_MESSAGE" value="com" />
+    <MESSAGE value="added zadani" />
+    <option name="LAST_COMMIT_MESSAGE" value="added zadani" />
   </component>
 </project>

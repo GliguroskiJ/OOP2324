@@ -70,7 +70,7 @@ public class Enemy {
             player.setHealth(player.getHealth()-enemyDamage);
             healthAfterAttack = player.getHealth();
 
-            return "Obdržel si " + enemyDamage + " bodů poškození a aktuálně máš " + healthAfterAttack + " životů\n";
+            return "Obdržel si " + enemyDamage + " bodů poškození a aktuálně máš " + healthAfterAttack + " životů";
         }
         else return "";
     }

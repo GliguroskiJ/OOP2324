@@ -31,21 +31,26 @@ public class AttackCommand implements Command {
             if (enemy.isDead() && (enemy.getType() == Enemy.enemyType.boss)) {
                 gameData.setFinished(true);
                 return "Zabil si bosse a vyhrál si!";
-            }
-            else if (enemy.isDead()) {
+
+            } else if (enemy.isDead()) {
                 gameData.getCurrentRoom().getFloor().add(enemy.dropItem());
                 return "Nepřítel obrdžel " + damageToEnemy + " bodů poškození a byl poražen!\n" +
                         "Ty si obdržel " + damageToPlayer + " bodů poškození a aktuálně máš " + player.getHealth() + " životů";
+
             } else if (player.isDead()) {
                 gameData.setFinished(true);
                 return "Nepřítel tě zabil!\n";
 
             } else return "Nepřítel obrdžel " + damageToEnemy + " bodů poškození a aktuálně má " + enemy.getHealth() + " životů\n" +
                     "Ty si obdržel " + damageToPlayer + " bodů poškození a aktuálně máš " + player.getHealth() + " životů";
+
         } else if (gameData.getCurrentRoom().isEnemyNull()) {
             return "Není na koho útočit";
+
         } else if (enemy.isDead()) {
             return "Nepřítel je již po smrti!";
-        } else return "Nejprve si nasaď zbraň!";
+
+        } else return "Nejprve si nasaď zbraň!" + "\n" +
+                enemy.onlyEnemyDealDamage(gameData, null);
     }
 }

@@ -36,7 +36,7 @@ public class EquipCommand implements Command{
             return  player.weaponChange(inventoryMap, weaponToEquip);
 
         } else if ((inventoryMap.containsKey(weaponToEquip)) && (inventoryMap.get(weaponToEquip).getType() == Item.itemType.weapon) && ((!enemy.isDead()) || !gameData.getCurrentRoom().isEnemyNull())) {
-            return player.weaponChange(inventoryMap, weaponToEquip) +
+            return player.weaponChange(inventoryMap, weaponToEquip) + "\n" +
                     enemy.onlyEnemyDealDamage(gameData, null);
 
         } else if (inventoryMap.containsKey(weaponToEquip) && inventoryMap.get(weaponToEquip).getType() == Item.itemType.key) {
