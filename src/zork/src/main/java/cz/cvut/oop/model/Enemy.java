@@ -19,6 +19,14 @@ public class Enemy {
         this.itemDrop = itemDrop;
     }
 
+    public Enemy(EnemyStats enemyStats, Item itemDrop) {
+        this.name = enemyStats.getName();
+        this.damage = enemyStats.getDamage();
+        this.health = enemyStats.getHealth();
+        this.type = enemyStats.getEnemyType();
+        this.itemDrop = itemDrop;
+    }
+
     public String getName() {
         return name;
     }

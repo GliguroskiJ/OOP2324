@@ -43,7 +43,7 @@ public class GoCommand implements Command{
                     lookCommandExec(gameData);
 
         } else if (!gameData.getCurrentRoom().getEnemy().isDead()) {
-            return "Nejprve se musíš dostat přes nepřítele, který ti stojí v cestě!" +
+            return "Nejprve se musíš dostat přes nepřítele, který ti stojí v cestě!\n" +
                     enemy.onlyEnemyDealDamage(gameData, null);
 
         } else if (gameData.getCurrentRoom().getExitByName(roomName).getEnemy().getType() == Enemy.enemyType.boss) {
