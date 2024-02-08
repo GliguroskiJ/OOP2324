@@ -811,3 +811,13 @@
 08-02-2024 15:40:09 [main] INFO  cz.cvut.oop.ui.CommandLineUi - go knihovna
 08-02-2024 15:40:10 [main] INFO  cz.cvut.oop.ui.CommandLineUi - look
 08-02-2024 15:40:14 [main] INFO  cz.cvut.oop.ui.CommandLineUi - attack
+08-02-2024 15:46:45 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+08-02-2024 15:46:48 [main] INFO  cz.cvut.oop.ui.CommandLineUi - look
+08-02-2024 15:46:52 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take klacek
+08-02-2024 15:46:57 [main] INFO  cz.cvut.oop.ui.CommandLineUi - equip klacek
+08-02-2024 15:47:00 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take item1
+08-02-2024 15:47:04 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take item2
+08-02-2024 15:47:09 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take item3
+08-02-2024 15:47:13 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take item4
+08-02-2024 15:47:16 [main] INFO  cz.cvut.oop.ui.CommandLineUi - take item5
+08-02-2024 15:47:18 [main] INFO  cz.cvut.oop.ui.CommandLineUi - look
